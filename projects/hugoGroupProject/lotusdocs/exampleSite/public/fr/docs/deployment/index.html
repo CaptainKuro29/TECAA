@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+
+    
+
+<html lang="fr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <title>Deployment | Lotus Docs Example Site</title>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guide to creating new content in Lotus Docs">
+    <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
+    <meta name="author" content="Colin Wilson - Lotus Labs" />
+    <meta name="email" content="support@aigis.uk" />
+    <meta name="website" content="https://lotusdocs.dev" />
+    <meta name="Version" content="v0.1.0" />
+    
+    <link rel="icon" href="//tecaahandson.netlify.app/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="//tecaahandson.netlify.app/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="//tecaahandson.netlify.app/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//tecaahandson.netlify.app/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//tecaahandson.netlify.app/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="//tecaahandson.netlify.app/site.webmanifest">
+<meta property="og:title" content="Deployment" />
+<meta property="og:description" content="A guide to creating new content in Lotus Docs" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//tecaahandson.netlify.app/fr/docs/deployment/" /><meta property="og:image" content="//tecaahandson.netlify.app/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7892778916487216696.png"/><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-05-03T22:37:22+01:00" />
+<meta property="article:modified_time" content="2024-04-22T22:17:43+01:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="//tecaahandson.netlify.app/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7892778916487216696.png"/>
+<meta name="twitter:title" content="Deployment"/>
+<meta name="twitter:description" content="A guide to creating new content in Lotus Docs"/>
+
+    
+    <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+    
+    
+            
+                <script type="text/javascript" src="//tecaahandson.netlify.app/docs/js/flexsearch.bundle.js"></script>
+            
+        
+    
+    
+    
+    
+        
+        
+        
+        
+    
+        
+        
+        
+        
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700|Fira+Code:500,700&display=block" rel="stylesheet">
+
+    <link rel="stylesheet" href="/docs/scss/style.css" crossorigin="anonymous">
+    
+    
+    </head><body>
+        <div class="content">
+            <div class="page-wrapper toggled">
+<nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-brand">
+        <a href='/fr/' aria-label="HomePage" alt="HomePage">
+            
+                <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+            
+        </a>
+    </div>
+    <div class="sidebar-content" style="height: calc(100% - 131px);">
+        <ul class="sidebar-menu">
+            
+                
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/about/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                À propos
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="current">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/deployment/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                Deployment
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/color-picking-implementation/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                Implémentation de la page de sélection de couleur
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/about-implement-fr/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                Mise en Place de la Page À Propos
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/color-picking/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                Sélection des couleurs
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="//tecaahandson.netlify.app/fr/docs/setup/">
+                                <i class="material-icons me-2">rocket_launch</i>
+                                
+                                Setup
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        
+    </div>
+    
+        <ul class="sidebar-footer list-unstyled mb-0">
+            
+        </ul>
+    
+</nav>
+
+                    <main class="page-content bg-transparent">
+                        
+<div id="top-header" class="top-header d-print-none">
+    <div class="header-bar d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <a href='/fr/'
+                class="logo-icon me-3" aria-label="HomePage" alt="HomePage">
+                <div class="small">
+                    
+                    <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+                    
+                </div>
+                <div class="big">
+                    
+                    <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+                    
+                </div>
+            </a>
+            <button id="close-sidebar" class="btn btn-icon btn-soft">
+                <span class="material-icons size-20 menu-icon align-middle">menu</span>
+            </button>
+            
+            
+            
+            <button id="flexsearch-button" class="ms-3 btn btn-soft" data-bs-toggle="collapse"
+                data-bs-target="#FlexSearchCollapse" aria-expanded="false" aria-controls="FlexSearchCollapse">
+                <span class="material-icons size-20 menu-icon align-middle">search</span>
+                <span class="flexsearch-button-placeholder ms-1 me-2 d-none d-sm-block">Rechercher</span>
+                <div class="d-none d-sm-block">
+                    <span class="flexsearch-button-keys">
+                        <kbd class="flexsearch-button-cmd-key">
+                            <svg width="44" height="15">
+                                <path
+                                    d="M2.118,11.5A1.519,1.519,0,0,1,1,11.042,1.583,1.583,0,0,1,1,8.815a1.519,1.519,0,0,1,1.113-.458h.715V6.643H2.118A1.519,1.519,0,0,1,1,6.185,1.519,1.519,0,0,1,.547,5.071,1.519,1.519,0,0,1,1,3.958,1.519,1.519,0,0,1,2.118,3.5a1.519,1.519,0,0,1,1.114.458A1.519,1.519,0,0,1,3.69,5.071v.715H5.4V5.071A1.564,1.564,0,0,1,6.976,3.5,1.564,1.564,0,0,1,8.547,5.071,1.564,1.564,0,0,1,6.976,6.643H6.261V8.357h.715a1.575,1.575,0,0,1,1.113,2.685,1.583,1.583,0,0,1-2.227,0A1.519,1.519,0,0,1,5.4,9.929V9.214H3.69v.715a1.519,1.519,0,0,1-.458,1.113A1.519,1.519,0,0,1,2.118,11.5Zm0-.857a.714.714,0,0,0,.715-.714V9.214H2.118a.715.715,0,1,0,0,1.429Zm4.858,0a.715.715,0,1,0,0-1.429H6.261v.715a.714.714,0,0,0,.715.714ZM3.69,8.357H5.4V6.643H3.69ZM2.118,5.786h.715V5.071a.714.714,0,0,0-.715-.714.715.715,0,0,0-.5,1.22A.686.686,0,0,0,2.118,5.786Zm4.143,0h.715a.715.715,0,0,0,.5-1.22.715.715,0,0,0-1.22.5Z"
+                                    fill="currentColor"></path>
+                                <path d="M12.4,11.475H11.344l3.879-7.95h1.056Z" fill="currentColor"></path>
+                                <path
+                                    d="M25.073,5.384l-.864.576a2.121,2.121,0,0,0-1.786-.923,2.207,2.207,0,0,0-2.266,2.326,2.206,2.206,0,0,0,2.266,2.325,2.1,2.1,0,0,0,1.782-.918l.84.617a3.108,3.108,0,0,1-2.622,1.293,3.217,3.217,0,0,1-3.349-3.317,3.217,3.217,0,0,1,3.349-3.317A3.046,3.046,0,0,1,25.073,5.384Z"
+                                    fill="currentColor"></path>
+                                <path d="M30.993,5.142h-2.07v5.419H27.891V5.142h-2.07V4.164h5.172Z" fill="currentColor">
+                                </path>
+                                <path
+                                    d="M34.67,4.164c1.471,0,2.266.658,2.266,1.851,0,1.087-.832,1.809-2.134,1.855l2.107,2.691h-1.28L33.591,7.87H33.07v2.691H32.038v-6.4Zm-1.6.969v1.8h1.572c.832,0,1.22-.3,1.22-.918s-.411-.882-1.22-.882Z"
+                                    fill="currentColor"></path>
+                                <path d="M42.883,10.561H38.31v-6.4h1.033V9.583h3.54Z" fill="currentColor"></path>
+                            </svg>
+                        </kbd>
+                        <kbd class="flexsearch-button-key">
+                            <svg width="15" height="15">
+                                <path d="M5.926,12.279H4.41L9.073,2.721H10.59Z" fill="currentColor" />
+                            </svg>
+                        </kbd>
+                    </span>
+                </div>
+            </button>
+            
+            </div>
+
+        
+        <div class="d-flex align-items-center ms-3">
+            <label class="me-2">Background: </label>
+            <input class="me-2" type="color" id="backgroundColorPicker" value="#ffffff" title="Choose background color"
+                style="height: 40px; border: none; border-radius: 8px;" aria-label="change-background-color">
+            <label class="me-2">Text: </label>
+            <input class="me-2" type="color" id="fontColorPicker" value="#000000" title="Choose font color"
+                style="height: 40px; border: none; border-radius: 8px;" aria-label="change-text-color">
+        </div>
+        
+
+        <div class="d-flex align-items-center">
+            <ul class="list-unstyled mb-0">
+                
+                
+                
+                <li class="list-inline-item mb-0">
+                    <a href=" https://github.com/ "
+                        alt="github" rel="noopener noreferrer" target="_blank">
+                        <div class="btn btn-icon btn-default border-0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            
+                        </div>
+                    </a>
+                </li>
+                
+                
+                <li class="list-inline-item mb-0">
+                    <a href=" https://twitter.com/ "
+                        alt="twitter" rel="noopener noreferrer" target="_blank">
+                        <div class="btn btn-icon btn-default border-0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Twitter / X</title><path d="M.088.768l9.266,12.39L.029,23.231h2.1l8.163-8.819,6.6,8.819h7.142L14.242,10.145,22.921.768h-2.1L13.3,8.891,7.229.768ZM3.174,2.314H6.455L20.942,21.685h-3.28Z" fill="currentColor"/></svg>
+                            
+                        </div>
+                    </a>
+                </li>
+                
+                
+            </ul>
+            <button id="mode" class="btn btn-icon btn-default ms-2" type="button"
+                aria-label="Toggle user interface mode">
+                <span class="toggle-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 48 48"
+                        fill="currentColor">
+                        <title>Activer le mode sombre</title>
+                        <path
+                            d="M24 42q-7.5 0-12.75-5.25T6 24q0-7.5 5.25-12.75T24 6q.4 0 .85.025.45.025 1.15.075-1.8 1.6-2.8 3.95-1 2.35-1 4.95 0 4.5 3.15 7.65Q28.5 25.8 33 25.8q2.6 0 4.95-.925T41.9 22.3q.05.6.075.975Q42 23.65 42 24q0 7.5-5.25 12.75T24 42Zm0-3q5.45 0 9.5-3.375t5.05-7.925q-1.25.55-2.675.825Q34.45 28.8 33 28.8q-5.75 0-9.775-4.025T19.2 15q0-1.2.25-2.575.25-1.375.9-3.125-4.9 1.35-8.125 5.475Q9 18.9 9 24q0 6.25 4.375 10.625T24 39Zm-.2-14.85Z" />
+                    </svg>
+                </span>
+                <span class="toggle-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 48 48"
+                        fill="currentColor">
+                        <title>Activer le mode lumière</title>
+                        <path
+                            d="M24 31q2.9 0 4.95-2.05Q31 26.9 31 24q0-2.9-2.05-4.95Q26.9 17 24 17q-2.9 0-4.95 2.05Q17 21.1 17 24q0 2.9 2.05 4.95Q21.1 31 24 31Zm0 3q-4.15 0-7.075-2.925T14 24q0-4.15 2.925-7.075T24 14q4.15 0 7.075 2.925T34 24q0 4.15-2.925 7.075T24 34ZM3.5 25.5q-.65 0-1.075-.425Q2 24.65 2 24q0-.65.425-1.075Q2.85 22.5 3.5 22.5h5q.65 0 1.075.425Q10 23.35 10 24q0 .65-.425 1.075-.425.425-1.075.425Zm36 0q-.65 0-1.075-.425Q38 24.65 38 24q0-.65.425-1.075.425-.425 1.075-.425h5q.65 0 1.075.425Q46 23.35 46 24q0 .65-.425 1.075-.425.425-1.075.425ZM24 10q-.65 0-1.075-.425Q22.5 9.15 22.5 8.5v-5q0-.65.425-1.075Q23.35 2 24 2q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 10 24 10Zm0 36q-.65 0-1.075-.425-.425-.425-.425-1.075v-5q0-.65.425-1.075Q23.35 38 24 38q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 46 24 46ZM12 14.1l-2.85-2.8q-.45-.45-.425-1.075.025-.625.425-1.075.45-.45 1.075-.45t1.075.45L14.1 12q.4.45.4 1.05 0 .6-.4 1-.4.45-1.025.45-.625 0-1.075-.4Zm24.7 24.75L33.9 36q-.4-.45-.4-1.075t.45-1.025q.4-.45 1-.45t1.05.45l2.85 2.8q.45.45.425 1.075-.025.625-.425 1.075-.45.45-1.075.45t-1.075-.45ZM33.9 14.1q-.45-.45-.45-1.05 0-.6.45-1.05l2.8-2.85q.45-.45 1.075-.425.625.025 1.075.425.45.45.45 1.075t-.45 1.075L36 14.1q-.4.4-1.025.4-.625 0-1.075-.4ZM9.15 38.85q-.45-.45-.45-1.075t.45-1.075L12 33.9q.45-.45 1.05-.45.6 0 1.05.45.45.45.45 1.05 0 .6-.45 1.05l-2.8 2.85q-.45.45-1.075.425-.625-.025-1.075-.425ZM24 24Z" />
+                    </svg>
+                </span>
+            </button>
+            
+            <div class="dropdown">
+                <button class="btn btn-link btn-default dropdown-toggle ps-2" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    FR
+                </button>
+                <ul class="dropdown-menu text-end">
+                    
+
+
+
+
+
+    
+    
+    <li><a class="dropdown-item" href="/docs/deployment/" role="button" rel="alternate" hreflang="en" lang="en">English</a></li>
+
+    
+    
+    <li><a class="dropdown-item" href="/de/docs/deployment/" role="button" rel="alternate" hreflang="de" lang="de">Deutsch</a></li>
+
+
+
+
+    
+        
+        
+        
+    
+
+    
+
+    
+        
+        
+        
+    
+
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="collapse" id="FlexSearchCollapse">
+        <div class="flexsearch-container">
+            <div class="flexsearch-keymap">
+                <li>
+                    <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Arrow down"
+                            role="img">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.2">
+                                <path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path>
+                            </g>
+                        </svg></kbd>
+                    <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Arrow up" role="img">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.2">
+                                <path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path>
+                            </g>
+                        </svg></kbd>
+                    <span class="flexsearch-key-label">pour parcourir</span>
+                </li>
+                <li>
+                    <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Enter key"
+                            role="img">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.2">
+                                <path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path>
+                            </g>
+                        </svg></kbd>
+                    <span class="flexsearch-key-label">pour sélectionner</span>
+                </li>
+                <li>
+                    <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Escape key"
+                            role="img">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.2">
+                                <path
+                                    d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956">
+                                </path>
+                            </g>
+                        </svg></kbd>
+                    <span class="flexsearch-key-label">pour fermer</span>
+                </li>
+            </div>
+            <form class="flexsearch position-relative flex-grow-1 ms-2 me-2">
+                <div class="d-flex flex-row">
+                    <input id="flexsearch" class="form-control" type="search" placeholder=""
+                        aria-label="" autocomplete="off">
+                    <button id="hideFlexsearch" type="button" class="ms-2 btn btn-soft">
+                        annuler
+                    </button>
+                </div>
+                <div id="suggestions" class="shadow rounded-1 d-none"></div>
+            </form>
+        </div>
+    </div>
+    
+    
+    
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var backgroundColorPicker = document.getElementById('backgroundColorPicker');
+            backgroundColorPicker.addEventListener('change', function () {
+                document.body.style.backgroundColor = this.value;
+                document.documentElement.style.backgroundColor = this.value;
+            });
+
+            var fontColorPicker = document.getElementById('fontColorPicker');
+            fontColorPicker.addEventListener('change', function () {
+                document.querySelectorAll('p, h1, h2, h3, h4, h5, li, a, div').forEach(element => {
+                    element.style = `color: ${this.value} !important`;
+                });
+            });
+        });
+    </script>
+</div>
+
+                            <div class="container-fluid">
+                                <div class="layout-spacing">
+                                    
+                                        <div class="d-md-flex justify-content-between align-items-center"><nav aria-label="breadcrumb" class="d-inline-block pb-2 mt-1 mt-sm-0">
+    <ul id="breadcrumbs" class="breadcrumb bg-transparent mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+        
+            
+                <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/fr/docs/">
+                        <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
+                    </a>
+                    <meta itemprop="position" content='1' />
+                </li>
+            
+        
+            <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Deployment</span>
+                <meta itemprop="position" content='2' />
+            </li>
+        
+    </ul>
+</nav></div>
+                                    
+                                    <div class="row flex-xl-nowrap">
+                                        
+                                        <div class="docs-toc col-xl-3    d-xl-block"><toc>
+    <div class="fw-bold text-uppercase mb-2">On this page</div>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#install-hugo">Install Hugo</a>
+          <ul>
+            <li><a href="#manual-installation">Manual Installation</a></li>
+          </ul>
+        </li>
+        <li><a href="#create-a-new-lotus-docs-site">Create a New Lotus Docs Site</a></li>
+        <li><a href="#create-new-content">Create New Content</a></li>
+        <li><a href="#preview-your-site">Preview your Site</a></li>
+        <li><a href="#ordering-content">Ordering Content</a></li>
+        <li><a href="#auto-generated-menu">Auto-Generated Menu</a></li>
+        <li><a href="#second-level-menu-items">Second Level Menu Items</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </toc></div>
+                                        
+                                        
+                                        <div class="docs-toc-mobile    d-print-none d-xl-none">
+                                            <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
+                                                Table of Contents
+                                            </button>
+<nav id="toc-mobile">
+  <ul class="dropdown-menu">
+    <li>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#install-hugo">Install Hugo</a>
+          <ul>
+            <li><a href="#manual-installation">Manual Installation</a></li>
+          </ul>
+        </li>
+        <li><a href="#create-a-new-lotus-docs-site">Create a New Lotus Docs Site</a></li>
+        <li><a href="#create-new-content">Create New Content</a></li>
+        <li><a href="#preview-your-site">Preview your Site</a></li>
+        <li><a href="#ordering-content">Ordering Content</a></li>
+        <li><a href="#auto-generated-menu">Auto-Generated Menu</a></li>
+        <li><a href="#second-level-menu-items">Second Level Menu Items</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                                        <div class="docs-content col-12 col-xl-9 mt-0">
+                                            <div class="mb-0 d-flex">
+                                                
+                                                <i class="material-icons title-icon me-2" aria-hidden="true">rocket_launch</i>
+                                                <span class="visually-hidden">rocket_launch Icon</span>
+                                                
+                                                <h1 class="content-title mb-0">
+                                                    Deployment
+                                                    
+                                                </h1>
+                                            </div>
+                                            
+                                                <p class="lead mb-3">A guide to creating new content in Lotus Docs</p>
+                                            
+                                            <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
+                                                
+    
+    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+        <h2 id="requirements">Requirements <a href="#requirements" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
+<li><strong>git</strong></li>
+<li><strong>Go ≥ v1.19</strong></li>
+<li><strong>Hugo ≥ v0.100.0</strong> (Extended Version)</li>
+</ul>
+<h2 id="install-hugo">Install Hugo <a href="#install-hugo" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Install the <a href="https://github.com/gohugoio/hugo/releases/latest" rel="external" target="_blank">Hugo CLI<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a>, using the specific instructions for your operating system below:</p>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-link  active"
+		   id="abedfcTab" data-bs-toggle="tab" data-bs-target="#abedfc"
+		   type="button" role="tab" aria-controls="abedfc" aria-selected="true">Linux</a>
+
+		
+
+		<a class="nav-link "
+		   id="deafcbTab" data-bs-toggle="tab" data-bs-target="#deafcb"
+		   type="button" role="tab" aria-controls="deafcb" aria-selected="true">Homebrew (macOS)</a>
+
+		
+
+		<a class="nav-link "
+		   id="dfeabcTab" data-bs-toggle="tab" data-bs-target="#dfeabc"
+		   type="button" role="tab" aria-controls="dfeabc" aria-selected="true">Windows (Chocolatey)</a>
+
+		
+
+		<a class="nav-link "
+		   id="abdfecTab" data-bs-toggle="tab" data-bs-target="#abdfec"
+		   type="button" role="tab" aria-controls="abdfec" aria-selected="true">Windows (Scoop)</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+
+
+
+
+
+
+<div class="tab-pane fade show active" id="abedfc" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="6eb6b43" class="language-shell ">
+  <code>sudo apt install hugo</code>
+  </pre>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tab-pane fade" id="deafcb" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>If you use the package manager <a href="https://brew.sh/" rel="external" target="_blank">Homebrew<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a>, run the <code>brew install</code> command in your terminal to install Hugo:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="a547e71" class="language-shell ">
+  <code>brew install hugo</code>
+  </pre>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tab-pane fade" id="dfeabc" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>If you use the package manager <a href="https://chocolatey.org/" rel="external" target="_blank">Chocolatey<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a>, run the <code>choco install</code> command in your terminal to install Hugo:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="3435477" class="language-shell ">
+  <code>choco install hugo --confirm</code>
+  </pre>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tab-pane fade" id="abdfec" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>If you use the package manager <a href="https://scoop.sh/" rel="external" target="_blank">Scoop<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a>, run the <code>scoop install</code> command in your terminal to install Hugo:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="7bb851b" class="language-shell ">
+  <code>scoop install hugo</code>
+  </pre>
+  </div>
+
+
+</div>
+
+
+</div>
+<h3 id="manual-installation">Manual Installation <a href="#manual-installation" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p>The Hugo GitHub repository contains pre-built versions of the Hugo command-line tool for various operating systems, which can be found on the <a href="https://github.com/gohugoio/hugo/releases/latest" rel="external" target="_blank">Releases page<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
+<p>For more instruction on installing these releases, refer to <a href="https://gohugo.io/getting-started/installing/" rel="external" target="_blank">Hugo’s documentation<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
+<h2 id="create-a-new-lotus-docs-site">Create a New Lotus Docs Site <a href="#create-a-new-lotus-docs-site" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>With Hugo installed, create a new Hugo project using the <code>hugo new</code> command:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="8ba141d" class="language-shell ">
+  <code>hugo new site my-docs-site &amp;&amp; cd my-docs-site</code>
+  </pre>
+  </div>
+<p>Now initialize your project as a Hugo Module using the <code>hugo mod init</code> command:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="5264c1e" class="language- ">
+  <code>hugo mod init my-docs-site</code>
+  </pre>
+  </div>
+<div class="alert alert-info d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  <span class="material-icons size-20 me-2">
+  info
+  </span></div>
+  <div class="w-100"><strong>Note</strong>: If your site already has a git repository, you can initialise your site using the path to your site&rsquo;s git repository e.g. <code>hugo mod init github.com/&lt;user&gt;/&lt;my-docs-site&gt;/</code>.</div>
+  </div>
+<p>You can now choose your preferred method for adding the Lotus Docs theme to your new site from the options below:</p>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-link  active"
+		   id="dafbceTab" data-bs-toggle="tab" data-bs-target="#dafbce"
+		   type="button" role="tab" aria-controls="dafbce" aria-selected="true">Add as a Hugo Module</a>
+
+		
+
+		<a class="nav-link "
+		   id="ebafcdTab" data-bs-toggle="tab" data-bs-target="#ebafcd"
+		   type="button" role="tab" aria-controls="ebafcd" aria-selected="true">Add as a Git submodule</a>
+
+		
+
+		<a class="nav-link "
+		   id="cbedafTab" data-bs-toggle="tab" data-bs-target="#cbedaf"
+		   type="button" role="tab" aria-controls="cbedaf" aria-selected="true">Clone theme files</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+
+
+
+
+
+
+<div class="tab-pane fade show active" id="dafbce" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Edit the <code>hugo.toml</code> configuration file to include the <a href="https://github.com/colinwilson/lotusdocs" rel="external" target="_blank">Lotus Docs theme<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a> and the <a href="https://github.com/gohugoio/hugo-mod-bootstrap-scss" rel="external" target="_blank">Hugo Bootstrap module<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a> (lines <code>5 to 11</code> below):</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+    
+  
+  
+
+  
+    
+
+    
+      
+    
+
+    
+    
+      
+      
+        
+      
+      
+    
+    
+
+    
+    
+
+   
+  
+
+  <div class="prism-codeblock  hl_lines linenos">
+  <pre id="3d44d2c" class="language-toml  line-numbers" data-line="5-11" data-line-offset="1">
+  <code>baseURL = &#39;http://example.org/&#39;
+languageCode = &#39;en-us&#39;
+title = &#39;My New Hugo Site&#39;
+
+[module]
+    [[module.imports]]
+        path = &#34;github.com/colinwilson/lotusdocs&#34;
+        disable = false
+    [[module.imports]]
+        path = &#34;github.com/gohugoio/hugo-mod-bootstrap-scss/v5&#34;
+        disable = false</code>
+  </pre>
+  </div>
+<div class="alert alert-info d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  <span class="material-icons size-20 me-2">
+  info
+  </span></div>
+  <div class="w-100"><strong>Note</strong>: Hugo ≥ v0.110.0 changed the name of the default config base filename to <code>hugo.toml</code>. If you&rsquo;re running an earlier version of Hugo, consider renaming your <code>config.toml</code> file to <code>hugo.toml</code>.</div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tab-pane fade" id="ebafcd" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Initialize Git and clone the Lotus Docs theme repository as a submodule:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="05813f9" class="language-shell ">
+  <code>git init
+git submodule add https://github.com/colinwilson/lotusdocs themes/lotusdocs</code>
+  </pre>
+  </div>
+<p>Update your existing <code>hugo.toml</code> config file with the configuration below:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+    
+  
+  
+
+  
+    
+
+    
+      
+    
+
+    
+    
+      
+      
+        
+      
+      
+    
+    
+
+    
+    
+
+   
+  
+
+  <div class="prism-codeblock  hl_lines linenos">
+  <pre id="817dc10" class="language-toml  line-numbers" data-line="5-11" data-line-offset="1">
+  <code>baseURL = &#39;http://example.org/&#39;
+languageCode = &#39;en-us&#39;
+title = &#39;My New Hugo Site&#39;
+
+[module]
+    [[module.imports]]
+        path = &#34;lotusdocs&#34;
+        disable = false
+    [[module.imports]]
+        path = &#34;github.com/gohugoio/hugo-mod-bootstrap-scss/v5&#34;
+        disable = false</code>
+  </pre>
+  </div>
+<div class="alert alert-info d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  <span class="material-icons size-20 me-2">
+  info
+  </span></div>
+  <div class="w-100"><strong>Note</strong>: Hugo ≥ v0.110.0 changed the name of the default config base filename to <code>hugo.toml</code>. If you&rsquo;re running an earlier version of Hugo, consider renaming your <code>config.toml</code> file to <code>hugo.toml</code>.</div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tab-pane fade" id="cbedaf" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>In cases where you prefer to customise and maintain the Lotus Docs theme yourself, you can clone the theme into your project’s <code>themes</code> subdirectory.</p>
+<p>Run the following command from your project’s root directory to clone the Lotus Docs theme into your <code>themes</code> subdirectory:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="fee774f" class="language-shell ">
+  <code>git clone https://github.com/colinwilson/lotusdocs themes/lotusdocs</code>
+  </pre>
+  </div>
+<p>Edit the <code>hugo.toml</code> configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines <code>5 to 11</code> below):</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+    
+  
+  
+
+  
+    
+
+    
+      
+    
+
+    
+    
+      
+      
+        
+      
+      
+    
+    
+
+    
+    
+
+   
+  
+
+  <div class="prism-codeblock  hl_lines linenos">
+  <pre id="817dc10" class="language-toml  line-numbers" data-line="5-11" data-line-offset="1">
+  <code>baseURL = &#39;http://example.org/&#39;
+languageCode = &#39;en-us&#39;
+title = &#39;My New Hugo Site&#39;
+
+[module]
+    [[module.imports]]
+        path = &#34;lotusdocs&#34;
+        disable = false
+    [[module.imports]]
+        path = &#34;github.com/gohugoio/hugo-mod-bootstrap-scss/v5&#34;
+        disable = false</code>
+  </pre>
+  </div>
+<div class="alert alert-info d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  <span class="material-icons size-20 me-2">
+  info
+  </span></div>
+  <div class="w-100"><strong>Note</strong>: Hugo ≥ v0.110.0 changed the name of the default config base filename to <code>hugo.toml</code>. If you&rsquo;re running an earlier version of Hugo, consider renaming your <code>config.toml</code> file to <code>hugo.toml</code>.</div>
+  </div>
+
+
+</div>
+
+
+</div>
+<h2 id="create-new-content">Create New Content <a href="#create-new-content" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Navigate to the root of your Hugo project and use the <code>hugo new</code> command to create a file in the <code>content/docs</code> directory:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="32dcac9" class="language-shell ">
+  <code>hugo new docs/example-page.md</code>
+  </pre>
+  </div>
+<p>This will create a markdown file named <code>example-page.md</code> with the following default front matter:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="eb3eb22" class="language-toml ">
+  <code>&#43;&#43;&#43;
+title = &#34;Example Page&#34;
+description = &#34;&#34;
+icon = &#34;article&#34;
+date = &#34;2023-05-22T00:27:57&#43;01:00&#34;
+lastmod = &#34;2023-05-22T00:27:57&#43;01:00&#34;
+draft = false
+toc = true
+weight = 999
+&#43;&#43;&#43;</code>
+  </pre>
+  </div>
+<p>Modify the options to suit your needs.</p>
+<p>The code below shows the front matter code used to create this page, along with a portion of markdown from the body:</p>
+
+
+
+
+
+
+  
+      <div class="prism-shortcode">
+      <pre id="c203b85" class="language-md"
+        ><code class="language-md"
+        >&#43;&#43;&#43;
+weight = 100
+date = &#34;2023-05-03T22:37:22&#43;01:00&#34;
+draft = true
+author = &#34;Colin Wilson&#34;
+title = &#34;Quickstart&#34;
+icon = &#34;rocket_launch&#34;
+toc = true
+description = &#34;A quickstart guide to creating new content in Lotus Docs&#34;
+publishdate = &#34;2023-05-03T22:37:22&#43;01:00&#34;
+tags = [&#34;Beginners&#34;]
+&#43;&#43;&#43;
+
+## Create New Content
+
+Navigate to the root of your Hugo project and use the `hugo new` command to create a file in the `content/docs` directory:
+
+```shell
+hugo new docs/examplepage.md
+```
+...
+</code></pre>
+      </div>
+  
+
+<h2 id="preview-your-site">Preview your Site <a href="#preview-your-site" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Now that you&rsquo;ve created some sample content you can preview your new Lotus Docs site using the <code>huge server</code> command:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="8e8cce2" class="language-shell ">
+  <code>hugo server -D</code>
+  </pre>
+  </div>
+<p>Navigate to <code>localhost:1313/docs</code> and you should see a card link to the <strong>Example Page</strong> created earlier:</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/lotus_docs_new_site_and_content_module_setup_oiuyex_15401169149424262839.png" alt="New Lotus Docs Site - Example Content" width="1509" height="779" loading="lazy">
+    
+  
+</p>
+<h2 id="ordering-content">Ordering Content <a href="#ordering-content" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Lotus Docs uses a simple weighting method for ordering content and creating menus.</p>
+<p>The front matter <code>weight</code> variable is used to order all content and auto-generate the menu structure (including the sidebar menu and page navigation buttons). Lower weight values take higher precedence. So content with lower weights come first and are so ordered in the menu.</p>
+<h2 id="auto-generated-menu">Auto-Generated Menu <a href="#auto-generated-menu" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>As mentioned, Lotus Docs auto-generates menus and navigation links using the <a href="https://gohugo.io/content-management/front-matter/#predefined" rel="external" target="_blank">front matter<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a> weight variable. For example, Navigate to the <code>content/docs</code> directory and create two content files, <code>doc-one.md</code> and <code>doc-two.md</code>, then edit the weight values to <code>100</code> and <code>200</code> respectively:</p>
+
+<div class="alert alert-default d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  
+  <span class="material-icons size-20 me-2">
+  notifications
+  </span></div>
+  
+  <div class="w-100">It&rsquo;s good practice to increment the weight of your posts by a factor of <code>100</code>. This ensures plenty of room to insert new posts between existing items should you need to.</div>
+  </div>
+<p>Your directory structure should now look like this:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="57350f5" class="language-treeview ">
+  <code>content/
+└── docs/
+    ├── doc-one.md
+    └── doc-two.md</code>
+  </pre>
+  </div>
+<p>Links to both posts are now visible in the sidebar menu where <code>doc-one.md</code> will come before and be placed above <code>doc-two.md</code>:</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/sidebar_menu_example_01-modified_qkb2si_9542253031434895153.png" alt="sidebar menu items example" width="299" height="137" loading="lazy">
+    
+  
+</p>
+
+<div class="alert alert-info d-flex" role="alert">
+  <div class="flex-shrink-1 alert-icon">
+  
+  <span class="material-icons size-20 me-2">
+  info
+  </span></div>
+  
+  <div class="w-100">The option to manually configure a predefined menu structure in <code>hugo.toml</code> as opposed to an auto-generated one is part of the Lotus Docs roadmap.</div>
+  </div>
+<h2 id="second-level-menu-items">Second Level Menu Items <a href="#second-level-menu-items" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Second level menu items can be generated by first creating a <strong>&lsquo;parent&rsquo;</strong> directory containing an <code>_index.md</code> file, e.g.:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="5203ea3" class="language-shell ">
+  <code>hugo new docs/parent-directory/_index.md</code>
+  </pre>
+  </div>
+<p>The above command creates an <code>_index.md</code> file inside a directory named <code>parent-directory</code> under <code>content/docs</code>:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="5e9fb13" class="language-treeview ">
+  <code>content/
+└── docs/
+    ├── parent-directory/
+    │   └── _index.md
+    ├── doc-one.md
+    ├── doc-two.md
+    └── _index.md</code>
+  </pre>
+  </div>
+<p>You can now create second level items inside the <code>parent-directory</code> as normal. Run the <code>hugo new</code> command again to create a post inside the newly created <code>parent-directory</code>:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="9958648" class="language-shell ">
+  <code>hugo new docs/parent-directory/doc-three.md</code>
+  </pre>
+  </div>
+<p>Your directory/file structure should now look like this:</p>
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="ac388be" class="language-treeview ">
+  <code>content/
+└── docs/
+    ├── parent-directory/
+    │   ├── _index.md
+    │   └── doc-three.md
+    ├── doc-one.md
+    ├── doc-two.md
+    └── _index.md</code>
+  </pre>
+  </div>
+<p>This is reflected in the sidebar menu with <code>parent-directory</code> functioning as a dropdown menu containing a link to the <strong>Doc Three</strong> post:</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/sidebar_menu_example_02_jsecye_1286223822533081797.png" alt="sidebar parent menu example" width="299" height="110" loading="lazy">
+    
+  
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+<div class="gitinfo d-flex flex-wrap justify-content-between align-items-center opacity-85 pt-3">
+    <div id="edit-this-page" class="mt-1">
+        <a href="https://github.com/colinwilson/lotusdocs.dev/blob/release/content/fr/docs/deployment.md" alt="Deployment" rel="noopener noreferrer" target="_blank">
+            
+            <span class="me-1 align-text-bottom">
+                
+                    <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+  <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
+</svg>
+
+                
+            </span>
+            Edit this page
+            
+        </a>
+    </div>
+    
+    <div id="last-modified" class="mt-1">
+        <p class="mb-0 fw-semibold">Last updated <span
+            id="relativetime"
+            data-authdate="2024-04-22T22:17:43&#43;0100"
+            title="22 avr. 2024, 22:17 BST">
+            22 avr. 2024, 22:17 BST
+        </span>. <span class="material-icons size-20 align-text-bottom opacity-75">history</span>
+        </p>
+    </div>
+    
+</div>
+
+    
+
+    
+                                            </div>
+                                            <div><hr class="doc-hr">
+<div id="doc-nav" class="d-print-none">
+
+	<div class="row flex-xl-nowrap ">
+	<div class="col-sm-6 pt-2 doc-next">
+		<a href="/fr/docs/about/">
+			<div class="card h-100 my-1">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> À propos</p>
+					<p class="card-text ms-2">Découvrez comment nous créons …</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	<div class="col-sm-6 pt-2 doc-prev">
+		<a class="ms-auto" href="/fr/docs/color-picking-implementation/">
+			<div class="card h-100 my-1 text-end">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Implémentation de la page de sélection de couleur <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">Un guide pour mettre en œuvre …</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	</div>
+</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<footer class="shadow py-3 d-print-none">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="text-sm-start text-center mx-md-2">
+                    <p class="mb-0">
+                        
+                        © 2024 Lotus Labs. Built with <a href="https://github.com/colinwilson/lotusdocs"><strong>Lotus Docs</strong></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+            </div>
+        </div>
+
+        
+        
+        <button onclick="topFunction()" id="back-to-top" aria-label="Back to Top Button" class="back-to-top fs-5"><svg width="24" height="24"><path d="M12,10.224l-6.3,6.3L4.32,15.152,12,7.472l7.68,7.68L18.3,16.528Z" style="fill:#fff"/></svg></button>
+        
+        
+
+        
+        
+            <script>(()=>{var e=document.getElementById("mode");e!==null&&(window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",e=>{e.matches?(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")):(localStorage.setItem("theme","light"),document.documentElement.removeAttribute("data-dark-mode"))}),e.addEventListener("click",()=>{document.documentElement.toggleAttribute("data-dark-mode"),localStorage.setItem("theme",document.documentElement.hasAttribute("data-dark-mode")?"dark":"light")}),localStorage.getItem("theme")==="dark"?document.documentElement.setAttribute("data-dark-mode",""):document.documentElement.removeAttribute("data-dark-mode"))})()</script>
+        
+
+
+
+
+    
+        
+        
+    
+    
+
+
+
+
+
+
+    <script src="/docs/js/bootstrap.js" defer></script>
+
+
+    <script type="text/javascript" src="//tecaahandson.netlify.app/docs/js/bundle.js" defer></script>
+        
+
+        
+        <script type="module">
+    var suggestions = document.getElementById('suggestions');
+    var search = document.getElementById('flexsearch');
+
+    const flexsearchContainer = document.getElementById('FlexSearchCollapse');
+
+    const hideFlexsearchBtn = document.getElementById('hideFlexsearch');
+
+    const configObject = { toggle: false }
+    const flexsearchContainerCollapse = new Collapse(flexsearchContainer, configObject) 
+
+    if (search !== null) {
+        document.addEventListener('keydown', inputFocus);
+        flexsearchContainer.addEventListener('shown.bs.collapse', function () {
+            search.focus();
+        });
+        
+        var topHeader = document.getElementById("top-header");
+        document.addEventListener('click', function(elem) {
+            if (!flexsearchContainer.contains(elem.target) && !topHeader.contains(elem.target))
+                flexsearchContainerCollapse.hide();
+        });
+    }
+
+    hideFlexsearchBtn.addEventListener('click', () =>{
+        flexsearchContainerCollapse.hide()
+    })
+
+    function inputFocus(e) {
+        if (e.ctrlKey && e.key === '/') {
+            e.preventDefault();
+            flexsearchContainerCollapse.toggle();
+        }
+        if (e.key === 'Escape' ) {
+            search.blur();
+            
+            flexsearchContainerCollapse.hide();
+        }
+    };
+
+    document.addEventListener('click', function(event) {
+
+    var isClickInsideElement = suggestions.contains(event.target);
+
+    if (!isClickInsideElement) {
+        suggestions.classList.add('d-none');
+    }
+
+    });
+
+    
+
+
+    document.addEventListener('keydown',suggestionFocus);
+
+    function suggestionFocus(e) {
+    const suggestionsHidden = suggestions.classList.contains('d-none');
+    if (suggestionsHidden) return;
+
+    const focusableSuggestions= [...suggestions.querySelectorAll('a')];
+    if (focusableSuggestions.length === 0) return;
+
+    const index = focusableSuggestions.indexOf(document.activeElement);
+
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        const nextIndex = index > 0 ? index - 1 : 0;
+        focusableSuggestions[nextIndex].focus();
+    }
+    else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        const nextIndex= index + 1 < focusableSuggestions.length ? index + 1 : index;
+        focusableSuggestions[nextIndex].focus();
+    }
+
+    }
+
+    
+
+
+    (function(){
+
+    var index = new FlexSearch.Document({
+        
+        tokenize: "forward",
+        minlength:  0 ,
+        cache:  100 ,
+        optimize:  true ,
+        document: {
+        id: 'id',
+        store: [
+            "href", "title", "description"
+        ],
+        index: ["title", "description", "content"]
+        }
+    });
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+
+    
+
+    index.add(
+            {
+                id:  0 ,
+                href: "\/fr\/docs\/about\/",
+                title: "À propos",
+                description: "Découvrez comment nous créons un guide centré sur l'utilisateur pour construire des sites Web de documentation technique.",
+                content: "Bienvenue dans notre projet de documentation technique linkCe projet fait partie de notre cours de génie informatique. Il vous offre une aide pratique pour construire et gérer des sites Web de documentation technique. Nous utilisons des technologies Web modernes et suivons les meilleures pratiques de l’industrie pour vous aider à bien apprendre la documentation technique.\nCe que nous visons à faire linkNous sommes ici pour aider les développeurs, nouveaux et expérimentés, à comprendre comment créer des sites Web de documentation. Notre projet comprend tout, de la gestion de contenu et du design au respect des normes d’accessibilité et à la gestion des technologies backend.\nRencontrez l’équipe link Pedro Martins de Felgueiras dirige le récit de cette page avec une communication claire. Ricardo Mascarenhas s’occupe de la “Page de sélection des couleurs” et vient de Porto sur son scooter électrique, s’assurant que notre site est superbe. João Martins gère notre “Page de déploiement”, utilisant ses compétences en HTML pour que notre site fonctionne bien sur différentes plateformes. Pedro Simões, fan d’anime et expert en technologies backend de Porto, prend en charge la “Page de configuration” avec ses solides compétences en Java. Comment nous construisons linkUtilisant le cadre Hugo pour sa rapidité et son efficacité, notre site Web est conçu pour être rapide, facile à utiliser et réactif. Cela assure une expérience utilisateur fluide.\nNotre engagement envers l’accessibilité linkNous suivons les directives d’accessibilité du contenu Web (WCAG) pour garantir que notre site est accessible à tous, quelles que soient leurs capacités. Vous pouvez voir notre engagement dans chaque choix que nous faisons, de la sélection des couleurs aux éléments interactifs.\nDéclaration d’accessibilité linkIntroduction linkNotre engagement va au-delà de la simple conformité. Nous voulons créer un lieu accueillant en ligne pour tous, en particulier pour les personnes handicapées. Nous continuons à travailler pour améliorer l’accès et l’utilisation pour tous en utilisant les normes et technologies les plus récentes.\nNotre engagement envers l’accessibilité linkObjectif :\nNotre objectif principal est de suivre les directives d’accessibilité du contenu Web (WCAG) 2.1 Niveau AA. Cela assure que notre site Web est utilisable par des personnes de toutes capacités et handicaps.\nFonctionnalités d’accessibilité :\nNous avons ajouté des fonctionnalités pour garantir que tout le monde puisse utiliser le site facilement :\nNavigation au clavier : Vous pouvez utiliser notre site Web avec un clavier seul, ce qui vous permet d’interagir sans souris. Compatibilité avec les lecteurs d’écran : Nous nous assurons que notre contenu fonctionne avec les lecteurs d’écran, qui aident à lire le texte à haute voix. Taille de texte et contraste ajustables : Vous pouvez modifier les tailles de texte et les contrastes pour faciliter la lecture. Conseils d’utilisation linkRecommandations pour une expérience optimale :\nPour la meilleure expérience, nous suggérons d’utiliser les derniers outils d’accessibilité et les navigateurs qui soutiennent ces technologies. Si vous avez des difficultés à utiliser notre site, veuillez contacter directement notre équipe de support.\nRetours et Contact linkNous apprécions vos retours :\nVos commentaires sont très importants pour nous aider à rendre notre site Web meilleur pour tous. Veuillez nous informer de tout problème que vous rencontrez ou suggérer des améliorations :\nEmail : 1230204@isep.ipp.pt Téléphone : [+351912206445] Engagement pour l’amélioration continue linkNous voyons l’accessibilité comme un objectif continu et cherchons toujours de nouvelles façons de rendre le site meilleur. Vos retours nous aident à continuer à améliorer et à garantir que notre site répond à divers besoins.\nConformité légale et réglementaire linkRespect des lois :\nNotre site Web respecte toutes les lois et règles d’accessibilité pour dépasser ce qui est requis.\nMises à jour et modifications linkMises à jour régulières :\nNous mettons souvent à jour nos fonctionnalités et méthodes d’accessibilité pour suivre les lois, les changements technologiques et les retours des utilisateurs.\nContrôle de la performance linkNous ne nous contentons pas de construire ; nous nous assurons que notre site fonctionne bien. Nous continuons à vérifier et à améliorer pour atteindre les normes de performance les plus élevées, en garantissant qu’il fonctionne rapidement et sans problème pour chaque utilisateur.\n"
+            }
+        );
+    index.add(
+            {
+                id:  1 ,
+                href: "\/fr\/docs\/deployment\/",
+                title: "Deployment",
+                description: "A guide to creating new content in Lotus Docs",
+                content: "Requirements link git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo linkInstall the Hugo CLI, using the specific instructions for your operating system below:\nLinux\rHomebrew (macOS)\rWindows (Chocolatey)\rWindows (Scoop)\rYour Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:\nsudo apt install hugo\rIf you use the package manager Homebrew, run the brew install command in your terminal to install Hugo:\nbrew install hugo\rIf you use the package manager Chocolatey, run the choco install command in your terminal to install Hugo:\nchoco install hugo --confirm\rIf you use the package manager Scoop, run the scoop install command in your terminal to install Hugo:\nscoop install hugo\rManual Installation linkThe Hugo GitHub repository contains pre-built versions of the Hugo command-line tool for various operating systems, which can be found on the Releases page\nFor more instruction on installing these releases, refer to Hugo’s documentation\nCreate a New Lotus Docs Site linkWith Hugo installed, create a new Hugo project using the hugo new command:\nhugo new site my-docs-site \u0026\u0026 cd my-docs-site\rNow initialize your project as a Hugo Module using the hugo mod init command:\nhugo mod init my-docs-site\rinfo\rNote: If your site already has a git repository, you can initialise your site using the path to your site’s git repository e.g. hugo mod init github.com///.\rYou can now choose your preferred method for adding the Lotus Docs theme to your new site from the options below:\nAdd as a Hugo Module\rAdd as a Git submodule\rClone theme files\rEdit the hugo.toml configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines 5 to 11 below):\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"github.com/colinwilson/lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rInitialize Git and clone the Lotus Docs theme repository as a submodule:\ngit init\rgit submodule add https://github.com/colinwilson/lotusdocs themes/lotusdocs\rUpdate your existing hugo.toml config file with the configuration below:\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rIn cases where you prefer to customise and maintain the Lotus Docs theme yourself, you can clone the theme into your project’s themes subdirectory.\nRun the following command from your project’s root directory to clone the Lotus Docs theme into your themes subdirectory:\ngit clone https://github.com/colinwilson/lotusdocs themes/lotusdocs\rEdit the hugo.toml configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines 5 to 11 below):\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rCreate New Content linkNavigate to the root of your Hugo project and use the hugo new command to create a file in the content/docs directory:\nhugo new docs/example-page.md\rThis will create a markdown file named example-page.md with the following default front matter:\n+++\rtitle = \"Example Page\"\rdescription = \"\"\ricon = \"article\"\rdate = \"2023-05-22T00:27:57+01:00\"\rlastmod = \"2023-05-22T00:27:57+01:00\"\rdraft = false\rtoc = true\rweight = 999\r+++\rModify the options to suit your needs.\nThe code below shows the front matter code used to create this page, along with a portion of markdown from the body:\n+++\rweight = 100\rdate = \"2023-05-03T22:37:22+01:00\"\rdraft = true\rauthor = \"Colin Wilson\"\rtitle = \"Quickstart\"\ricon = \"rocket_launch\"\rtoc = true\rdescription = \"A quickstart guide to creating new content in Lotus Docs\"\rpublishdate = \"2023-05-03T22:37:22+01:00\"\rtags = [\"Beginners\"]\r+++\r## Create New Content\rNavigate to the root of your Hugo project and use the `hugo new` command to create a file in the `content/docs` directory:\r```shell\rhugo new docs/examplepage.md\r```\r...\rPreview your Site linkNow that you’ve created some sample content you can preview your new Lotus Docs site using the huge server command:\nhugo server -D\rNavigate to localhost:1313/docs and you should see a card link to the Example Page created earlier:\nOrdering Content linkLotus Docs uses a simple weighting method for ordering content and creating menus.\nThe front matter weight variable is used to order all content and auto-generate the menu structure (including the sidebar menu and page navigation buttons). Lower weight values take higher precedence. So content with lower weights come first and are so ordered in the menu.\nAuto-Generated Menu linkAs mentioned, Lotus Docs auto-generates menus and navigation links using the front matter weight variable. For example, Navigate to the content/docs directory and create two content files, doc-one.md and doc-two.md, then edit the weight values to 100 and 200 respectively:\nnotifications\rIt’s good practice to increment the weight of your posts by a factor of 100. This ensures plenty of room to insert new posts between existing items should you need to.\rYour directory structure should now look like this:\ncontent/\r└── docs/\r├── doc-one.md\r└── doc-two.md\rLinks to both posts are now visible in the sidebar menu where doc-one.md will come before and be placed above doc-two.md:\ninfo\rThe option to manually configure a predefined menu structure in hugo.toml as opposed to an auto-generated one is part of the Lotus Docs roadmap.\rSecond Level Menu Items linkSecond level menu items can be generated by first creating a ‘parent’ directory containing an _index.md file, e.g.:\nhugo new docs/parent-directory/_index.md\rThe above command creates an _index.md file inside a directory named parent-directory under content/docs:\ncontent/\r└── docs/\r├── parent-directory/\r│ └── _index.md\r├── doc-one.md\r├── doc-two.md\r└── _index.md\rYou can now create second level items inside the parent-directory as normal. Run the hugo new command again to create a post inside the newly created parent-directory:\nhugo new docs/parent-directory/doc-three.md\rYour directory/file structure should now look like this:\ncontent/\r└── docs/\r├── parent-directory/\r│ ├── _index.md\r│ └── doc-three.md\r├── doc-one.md\r├── doc-two.md\r└── _index.md\rThis is reflected in the sidebar menu with parent-directory functioning as a dropdown menu containing a link to the Doc Three post:\n"
+            }
+        );
+    index.add(
+            {
+                id:  2 ,
+                href: "\/fr\/docs\/color-picking-implementation\/",
+                title: "Implémentation de la page de sélection de couleur",
+                description: "Un guide pour mettre en œuvre la page de sélection de couleur",
+                content: "Introduction linkSur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.\nConfiguration link Installer Hugo et Go\nSi vous n’avez pas encore installé Hugo et Go, vous pouvez consulter les directives d’installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.\nN’oubliez pas les prérequis. Vous devriez avoir besoin de la commande suivante ou similaire : choco install hugo-extended (Windows) ou brew install hugo (Mac), par exemple.\nVérifiez la version avec : hugo version.\nVérifiez comment installer Go (Installation de Go) et procédez à l’installation, vérifiez que tout est bon à la fin : go version.\nTélécharger le thème Lotus Docs\nUtilisez le projet d’exemple Lotus Docs comme modèle. Commencez par cloner le dépôt depuis Répertoire GitHub de Lotus Docs et passez au dossier exampleSite. Là, exécutez la commande suivante : hugo server. Vous devriez maintenant voir quelque chose comme la Figure 1.\n| EN | FR | DE\r-------------------+-----+-----+------\rPages | 19 | 14 | 14\rPaginator pages | 0 | 0 | 0\rNon-page files | 1 | 1 | 1\rStatic files | 367 | 367 | 367\rProcessed images | 18 | 0 | 0\rAliases | 1 | 0 | 0\rCleaned | 0 | 0 | 0\rVotre site Web devrait être disponible à l’adresse http://tecaahandson.netlify.app/\nCode MD linkMaintenant, vous pouvez copier et coller le code suivant dans le fichier désiré, puis enregistrer et aller sur le site Web pour vérifier les résultats.\n---\rweight: 100\rdate: \"2023-05-03T22:37:22+01:00\"\rdraft: false\rauthor: \"Ricardo Mascarenhas\"\rtitle: \"Choix de la couleur\"\ricon: \"rocket_launch\"\rtoc: true\rdescription: \"Un guide pour créer la fonctionnalité de sélection de couleur dans Lotus Docs\"\rpublishdate: \"2023-05-03T22:37:22+01:00\"\rtags: [\"Débutants\"]\r---\r# Personnalisation de l'en-tête supérieur avec des sélecteurs de couleur\rNous avons introduit une fonctionnalité interactive dans l'en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en modifiant les couleurs d'arrière-plan et de police.\rCe guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.\r## Introduction\rL'en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur d'arrière-plan et un autre pour la couleur de police.\rCette addition améliore l'engagement des utilisateurs en offrant une interface plus personnalisable.\r## Détails de l'implémentation\r#### Ajout des sélecteurs de couleur\rNous avons ajouté deux éléments d'entrée HTML de type couleur à l'en-tête supérieur. Ces entrées permettent aux utilisateurs de sélectionner des couleurs, qui sont ensuite appliquées à l'arrière-plan et aux couleurs de police de la page.\r#### Stylisation des sélecteurs de couleur\rDu CSS en ligne a été utilisé pour styliser les sélecteurs de couleur, en veillant à ce qu'ils se fondent harmonieusement dans le design du site. Les styles incluent le réglage de la hauteur, la suppression de la bordure et l'ajout d'un rayon de bordure pour que les sélecteurs semblent arrondis.\r#### Scripting des changements de couleur\rUn extrait de code JavaScript a été ajouté pour écouter les changements de couleur via les sélecteurs de couleur et appliquer ces changements aux couleurs d'arrière-plan et de police du site Web de manière dynamique.\r## Comment ça marche\rLorsque le document est entièrement chargé, le script écoute un événement \"changement\" sur chaque sélecteur de couleur.\rLe changement de la valeur du sélecteur de couleur d'arrière-plan met à jour la couleur d'arrière-plan de la page entière pour correspondre à la couleur sélectionnée.\rDe même, le changement de la valeur du sélecteur de couleur de police met à jour la couleur du texte sur l'ensemble du site.\r## Conclusion\rGrâce à ces améliorations, notre site offre désormais une expérience utilisateur plus interactive et personnalisée. Les visiteurs peuvent personnaliser l'apparence du site selon leurs préférences, rendant leur expérience de navigation plus agréable.\r[Comment cette page a-t-elle été implémentée ?](/docs/color-picking-implementation/)\r"
+            }
+        );
+    index.add(
+            {
+                id:  3 ,
+                href: "\/fr\/docs\/about-implement-fr\/",
+                title: "Mise en Place de la Page À Propos",
+                description: "Un guide pour implémenter la page À Propos",
+                content: "Introduction linkSur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la manière de créer la page de sélection de couleur sur ce site web.\nConfiguration link Installer Hugo et Go\nSi vous n’avez pas encore installé Hugo et Go, vous pouvez consulter les instructions d’installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et aller directement à la suivante.\nN’oubliez pas les prérequis. Vous devriez avoir besoin de la commande suivante ou similaire : choco install hugo-extended (windows) ou brew install hugo (mac).\nVérifiez la version en utilisant : hugo version.\nVérifiez comment installer Go (Installation de Go) et procédez à l’installation, vérifiez que tout est correct à la fin : go version.\nTélécharger le thème Lotus Docs\nUtilisez le projet d’exemple Lotus Docs comme modèle. Commencez par cloner le dépôt depuis Répertoire GitHub de Lotus Docs et changez pour le dossier exampleSite. Là, exécutez la commande suivante : hugo server. Vous devriez maintenant voir quelque chose comme la Figure 1.\n| EN | FR | DE\r-------------------+-----+-----+------\rPages | 19 | 14 | 14\rPaginator pages | 0 | 0 | 0\rNon-page files | 1 | 1 | 1\rStatic files | 367 | 367 | 367\rProcessed images | 18 | 0 | 0\rAliases | 1 | 0 | 0\rNettoyé | 0 | 0 | 0\rVotre site web devrait être disponible à http://tecaahandson.netlify.app/\nImplémentation de la Page À Propos/Code MD link\r---\rweight: 100\rdate: \"2023-05-03T22:37:22+01:00\"\rdraft: false\rauthor: \"Pedro Martins\"\rtitle: \"À propos\"\ricon: \"rocket_launch\"\rtoc: true\rdescription: \"Découvrez comment nous créons un guide centré sur l'utilisateur pour construire des sites Web de documentation technique.\"\rpublishdate: \"2023-05-03T22:37:22+01:00\"\rtags: [\"Débutants\"]\r---\r# Bienvenue dans notre projet de documentation technique\rCe projet fait partie de notre cours de génie informatique. Il vous offre une aide pratique pour construire et gérer des sites Web de documentation technique. Nous utilisons des technologies Web modernes et suivons les meilleures pratiques de l'industrie pour vous aider à bien apprendre la documentation technique.\r## Ce que nous visons à faire\rNous sommes ici pour aider les développeurs, nouveaux et expérimentés, à comprendre comment créer des sites Web de documentation. Notre projet comprend tout, de la gestion de contenu et du design au respect des normes d'accessibilité et à la gestion des technologies backend.\r## Rencontrez l'équipe\r- **Pedro Martins** de Felgueiras dirige le récit de cette page avec une communication claire.\r- **Ricardo Mascarenhas** s'occupe de la \"Page de sélection des couleurs\" et vient de Porto sur son scooter électrique, s'assurant que notre site est superbe.\r- **João Martins** gère notre \"Page de déploiement\", utilisant ses compétences en HTML pour que notre site fonctionne bien sur différentes plateformes.\r- **Pedro Simões**, fan d'anime et expert en technologies backend de Porto, prend en charge la \"Page de configuration\" avec ses solides compétences en Java.\r## Comment nous construisons\rUtilisant le cadre Hugo pour sa rapidité et son efficacité, notre site Web est conçu pour être rapide, facile à utiliser et réactif. Cela assure une expérience utilisateur fluide.\r## Notre engagement envers l'accessibilité\rNous suivons les directives d'accessibilité du contenu Web (WCAG) pour garantir que notre site est accessible à tous, quelles que soient leurs capacités. Vous pouvez voir notre engagement dans chaque choix que nous faisons, de la sélection des couleurs aux éléments interactifs.\r## Déclaration d'accessibilité\r### Introduction\rNotre engagement va au-delà de la simple conformité. Nous voulons créer un lieu accueillant en ligne pour tous, en particulier pour les personnes handicapées. Nous continuons à travailler pour améliorer l'accès et l'utilisation pour tous en utilisant les normes et technologies les plus récentes.\r### Notre engagement envers l'accessibilité\r**Objectif :** Notre objectif principal est de suivre les directives d'accessibilité du contenu Web (WCAG) 2.1 Niveau AA. Cela assure que notre site Web est utilisable par des personnes de toutes capacités et handicaps.\r**Fonctionnalités d'accessibilité :** Nous avons ajouté des fonctionnalités pour garantir que tout le monde puisse utiliser le site facilement :\r- **Navigation au clavier** : Vous pouvez utiliser notre site Web avec un clavier seul, ce qui vous permet d'interagir sans souris.\r- **Compatibilité avec les lecteurs d'écran** : Nous nous assurons que notre contenu fonctionne avec les lecteurs d'écran, qui aident à lire le texte à haute voix.\r- **Taille de texte et contraste ajustables** : Vous pouvez modifier les tailles de texte et les contrastes pour faciliter la lecture.\r### Conseils d'utilisation\r**Recommandations pour une expérience optimale :** Pour la meilleure expérience, nous suggérons d'utiliser les derniers outils d'accessibilité et les navigateurs qui soutiennent ces technologies. Si vous avez des difficultés à utiliser notre site, veuillez contacter directement notre équipe de support.\r### Retours et Contact\r**Nous apprécions vos retours :** Vos commentaires sont très importants pour nous aider à rendre notre site Web meilleur pour tous. Veuillez nous informer de tout problème que vous rencontrez ou suggérer des améliorations :\r- **Email** : [1230204@isep.ipp.pt](mailto:1230204@isep.ipp.pt)\r- **Téléphone** : [+351912206445]\r### Engagement pour l'amélioration continue\rNous voyons l'accessibilité comme un objectif continu et cherchons toujours de nouvelles façons de rendre le site meilleur. Vos retours nous aident à continuer à améliorer et à garantir que notre site répond à divers besoins.\r### Conformité légale et réglementaire\r**Respect des lois :** Notre site Web respecte toutes les lois et règles d'accessibilité pour dépasser ce qui est requis.\r### Mises à jour et modifications\r**Mises à jour régulières :** Nous mettons souvent à jour nos fonctionnalités et méthodes d'accessibilité pour suivre les lois, les changements technologiques et les retours des utilisateurs.\r## Contrôle de la performance\rNous ne nous contentons pas de construire ; nous nous assurons que notre site fonctionne bien. Nous continuons à vérifier et à améliorer pour atteindre les normes de performance les plus élevées, en garantissant qu'il fonctionne rapidement et sans problème pour chaque utilisateur.\r"
+            }
+        );
+    index.add(
+            {
+                id:  4 ,
+                href: "\/fr\/docs\/color-picking\/",
+                title: "Sélection des couleurs",
+                description: "Un guide pour créer une fonctionnalité de sélection de couleur dans Lotus Docs",
+                content: "Personnalisation de l’en-tête supérieur avec des sélecteurs de couleur linkNous avons introduit une fonctionnalité interactive dans l’en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.\nCe guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.\nIntroduction linkL’en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.\nCette addition améliore l’engagement des utilisateurs en fournissant une interface plus personnalisable.\nDétails de l’implémentation linkAjout des sélecteurs de couleur linkNous avons ajouté deux éléments HTML de type couleur à l’en-tête supérieur. Ces entrées permettent aux utilisateurs de sélectionner des couleurs, qui sont ensuite appliquées à l’arrière-plan de la page et à la police.\nBackground: Text: Stylisation des Sélecteurs de Couleur Nous avons utilisé du CSS en ligne pour styliser les sélecteurs de couleur, garantissant qu’ils s’intègrent parfaitement au design du site. Les styles comprennent le réglage de la hauteur, la suppression de la bordure et l’ajout d’un border-radius pour que les sélecteurs apparaissent arrondis.\nScript pour les Changements de Couleur linkUn extrait de code JavaScript a été ajouté pour écouter les changements de couleur via les sélecteurs de couleur et appliquer ces changements aux couleurs de fond et de police du site de manière dynamique.\nFonctionnement linkLorsque le document est entièrement chargé, le script écoute un événement “change” sur chaque sélecteur de couleur.\nLe changement de la valeur du sélecteur de couleur de fond met à jour la couleur de fond de toute la page pour correspondre à la couleur sélectionnée.\nDe même, le changement de la valeur du sélecteur de couleur de police met à jour la couleur du texte sur l’ensemble du site.\nConclusion linkGrâce à ces améliorations, notre site offre désormais une expérience utilisateur plus interactive et personnalisée. Les visiteurs peuvent personnaliser l’apparence du site selon leurs préférences, rendant leur expérience de navigation plus agréable.\n"
+            }
+        );
+    index.add(
+            {
+                id:  5 ,
+                href: "\/fr\/docs\/setup\/",
+                title: "Setup",
+                description: "A quickstart guide to creating new content in Lotus Docs",
+                content: "Requirements link git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo linkInstall the Hugo CLI, using the specific instructions for your operating system below:\nLinux\rHomebrew (macOS)\rWindows (Chocolatey)\rWindows (Scoop)\rYour Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:\nsudo apt install hugo\rIf you use the package manager Homebrew, run the brew install command in your terminal to install Hugo:\nbrew install hugo\rIf you use the package manager Chocolatey, run the choco install command in your terminal to install Hugo:\nchoco install hugo --confirm\rIf you use the package manager Scoop, run the scoop install command in your terminal to install Hugo:\nscoop install hugo\rManual Installation linkThe Hugo GitHub repository contains pre-built versions of the Hugo command-line tool for various operating systems, which can be found on the Releases page\nFor more instruction on installing these releases, refer to Hugo’s documentation\nCreate a New Lotus Docs Site linkWith Hugo installed, create a new Hugo project using the hugo new command:\nhugo new site my-docs-site \u0026\u0026 cd my-docs-site\rNow initialize your project as a Hugo Module using the hugo mod init command:\nhugo mod init my-docs-site\rinfo\rNote: If your site already has a git repository, you can initialise your site using the path to your site’s git repository e.g. hugo mod init github.com///.\rYou can now choose your preferred method for adding the Lotus Docs theme to your new site from the options below:\nAdd as a Hugo Module\rAdd as a Git submodule\rClone theme files\rEdit the hugo.toml configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines 5 to 11 below):\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"github.com/colinwilson/lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rInitialize Git and clone the Lotus Docs theme repository as a submodule:\ngit init\rgit submodule add https://github.com/colinwilson/lotusdocs themes/lotusdocs\rUpdate your existing hugo.toml config file with the configuration below:\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rIn cases where you prefer to customise and maintain the Lotus Docs theme yourself, you can clone the theme into your project’s themes subdirectory.\nRun the following command from your project’s root directory to clone the Lotus Docs theme into your themes subdirectory:\ngit clone https://github.com/colinwilson/lotusdocs themes/lotusdocs\rEdit the hugo.toml configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines 5 to 11 below):\nbaseURL = 'http://example.org/'\rlanguageCode = 'en-us'\rtitle = 'My New Hugo Site'\r[module]\r[[module.imports]]\rpath = \"lotusdocs\"\rdisable = false\r[[module.imports]]\rpath = \"github.com/gohugoio/hugo-mod-bootstrap-scss/v5\"\rdisable = false\rinfo\rNote: Hugo ≥ v0.110.0 changed the name of the default config base filename to hugo.toml. If you’re running an earlier version of Hugo, consider renaming your config.toml file to hugo.toml.\rCreate New Content linkNavigate to the root of your Hugo project and use the hugo new command to create a file in the content/docs directory:\nhugo new docs/example-page.md\rThis will create a markdown file named example-page.md with the following default front matter:\n+++\rtitle = \"Example Page\"\rdescription = \"\"\ricon = \"article\"\rdate = \"2023-05-22T00:27:57+01:00\"\rlastmod = \"2023-05-22T00:27:57+01:00\"\rdraft = false\rtoc = true\rweight = 999\r+++\rModify the options to suit your needs.\nThe code below shows the front matter code used to create this page, along with a portion of markdown from the body:\n+++\rweight = 100\rdate = \"2023-05-03T22:37:22+01:00\"\rdraft = true\rauthor = \"Colin Wilson\"\rtitle = \"Quickstart\"\ricon = \"rocket_launch\"\rtoc = true\rdescription = \"A quickstart guide to creating new content in Lotus Docs\"\rpublishdate = \"2023-05-03T22:37:22+01:00\"\rtags = [\"Beginners\"]\r+++\r## Create New Content\rNavigate to the root of your Hugo project and use the `hugo new` command to create a file in the `content/docs` directory:\r```shell\rhugo new docs/examplepage.md\r```\r...\rPreview your Site linkNow that you’ve created some sample content you can preview your new Lotus Docs site using the huge server command:\nhugo server -D\rNavigate to localhost:1313/docs and you should see a card link to the Example Page created earlier:\nOrdering Content linkLotus Docs uses a simple weighting method for ordering content and creating menus.\nThe front matter weight variable is used to order all content and auto-generate the menu structure (including the sidebar menu and page navigation buttons). Lower weight values take higher precedence. So content with lower weights come first and are so ordered in the menu.\nAuto-Generated Menu linkAs mentioned, Lotus Docs auto-generates menus and navigation links using the front matter weight variable. For example, Navigate to the content/docs directory and create two content files, doc-one.md and doc-two.md, then edit the weight values to 100 and 200 respectively:\nnotifications\rIt’s good practice to increment the weight of your posts by a factor of 100. This ensures plenty of room to insert new posts between existing items should you need to.\rYour directory structure should now look like this:\ncontent/\r└── docs/\r├── doc-one.md\r└── doc-two.md\rLinks to both posts are now visible in the sidebar menu where doc-one.md will come before and be placed above doc-two.md:\ninfo\rThe option to manually configure a predefined menu structure in hugo.toml as opposed to an auto-generated one is part of the Lotus Docs roadmap.\rSecond Level Menu Items linkSecond level menu items can be generated by first creating a ‘parent’ directory containing an _index.md file, e.g.:\nhugo new docs/parent-directory/_index.md\rThe above command creates an _index.md file inside a directory named parent-directory under content/docs:\ncontent/\r└── docs/\r├── parent-directory/\r│ └── _index.md\r├── doc-one.md\r├── doc-two.md\r└── _index.md\rYou can now create second level items inside the parent-directory as normal. Run the hugo new command again to create a post inside the newly created parent-directory:\nhugo new docs/parent-directory/doc-three.md\rYour directory/file structure should now look like this:\ncontent/\r└── docs/\r├── parent-directory/\r│ ├── _index.md\r│ └── doc-three.md\r├── doc-one.md\r├── doc-two.md\r└── _index.md\rThis is reflected in the sidebar menu with parent-directory functioning as a dropdown menu containing a link to the Doc Three post:\n"
+            }
+        );
+    index.add(
+            {
+                id:  6 ,
+                href: "\/fr\/docs\/",
+                title: "Docs",
+                description: "",
+                content: ""
+            }
+        );
+    search.addEventListener('input', show_results, true);
+
+    function show_results(){
+        const maxResult =  5 ;
+        const minlength =  0 ;
+        var searchQuery = sanitizeHTML(this.value);
+        var results = index.search(searchQuery, {limit: maxResult, enrich: true});
+
+        
+        const flatResults = new Map(); 
+        for (const result of results.flatMap(r => r.result)) {
+        if (flatResults.has(result.doc.href)) continue;
+        flatResults.set(result.doc.href, result.doc);
+        }
+
+        suggestions.innerHTML = "";
+        suggestions.classList.remove('d-none');
+
+        
+        if (searchQuery.length < minlength) {
+            const minCharMessage = document.createElement('div')
+            minCharMessage.innerHTML = `Please type at least <strong>${minlength}</strong> characters`
+            minCharMessage.classList.add("suggestion__no-results");
+            suggestions.appendChild(minCharMessage);
+            return;
+        } else {
+            
+            if (flatResults.size === 0 && searchQuery) {
+                const noResultsMessage = document.createElement('div')
+                noResultsMessage.innerHTML = "Aucun résultat pour" + ` "<strong>${searchQuery}</strong>"`
+                noResultsMessage.classList.add("suggestion__no-results");
+                suggestions.appendChild(noResultsMessage);
+                return;
+            }
+        }
+
+        
+        for(const [href, doc] of flatResults) {
+            const entry = document.createElement('div');
+            suggestions.appendChild(entry);
+
+            const a = document.createElement('a');
+            a.href = href;
+            entry.appendChild(a);
+
+            const title = document.createElement('span');
+            title.textContent = doc.title;
+            title.classList.add("suggestion__title");
+            a.appendChild(title);
+
+            const description = document.createElement('span');
+            description.textContent = doc.description;
+            description.classList.add("suggestion__description");
+            a.appendChild(description);
+
+            suggestions.appendChild(entry);
+
+            if(suggestions.childElementCount == maxResult) break;
+        }
+    }
+    }());
+</script>
+        
+    </body>
+</html>
