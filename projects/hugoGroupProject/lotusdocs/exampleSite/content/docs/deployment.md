@@ -6,67 +6,35 @@ author: "Joao Martins"
 title: "Deployment"
 icon: "rocket_launch"
 toc: true
-description: "A guide to creating new content in Lotus Docs"
+description: "A guide to deploy a Hugo Website"
 publishdate: "2023-05-03T22:37:22+01:00"
 tags: ["Beginners"]
 ---
 
 ## Requirements
 
-- **git**
-- **Go ≥ v1.19**
-- **Hugo ≥ v0.100.0** (Extended Version)
+- **netlify cli**
 
-## Install Hugo
+## Install Netlify CLI
 
-Install the [Hugo CLI](https://github.com/gohugoio/hugo/releases/latest), using the specific instructions for your operating system below:
-
-{{< tabs tabTotal="4">}}
-{{% tab tabName="Linux" %}}
-
-Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:
+In the project folder type the following command to install Netlify globally:
 
 ```shell
-sudo apt install hugo
+npm install -g netlify-cli
 ```
 
 {{% /tab %}}
 {{% tab tabName="Homebrew (macOS)" %}}
 
-If you use the package manager [Homebrew](https://brew.sh/), run the `brew install` command in your terminal to install Hugo:
+If you use macOS and Homebrew ( [Homebrew](https://brew.sh/) ), use the following command instead :
 
 ```shell
-brew install hugo
+`brew install netlify-cli`
 ```
 
-{{% /tab %}}
-{{% tab tabName="Windows (Chocolatey)" %}}
+For more instruction about Netlify, refer to [Netlify documentation](https://docs.netlify.com/get-started/)
 
-If you use the package manager [Chocolatey](https://chocolatey.org/), run the `choco install` command in your terminal to install Hugo:
-
-```shell
-choco install hugo --confirm
-```
-
-{{% /tab %}}
-{{% tab tabName="Windows (Scoop)" %}}
-
-If you use the package manager [Scoop](https://scoop.sh/), run the `scoop install` command in your terminal to install Hugo:
-
-```shell
-scoop install hugo
-```
-
-{{% /tab %}}
-{{< /tabs >}}
-
-### Manual Installation
-
-The Hugo GitHub repository contains pre-built versions of the Hugo command-line tool for various operating systems, which can be found on the [Releases page](https://github.com/gohugoio/hugo/releases/latest)
-
-For more instruction on installing these releases, refer to [Hugo’s documentation](https://gohugo.io/getting-started/installing/)
-
-## Create a New Lotus Docs Site
+## Deploy with Netlify
 
 With Hugo installed, create a new Hugo project using the `hugo new` command:
 
