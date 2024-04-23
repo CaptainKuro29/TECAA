@@ -11,11 +11,16 @@ publishdate: "2023-05-03T22:37:22+01:00"
 tags: ["Anfänger"]
 ---
 
-# Anpassung des oberen Headers mit Farbauswahl
+<div style="border: 2px solid black; padding: 20px; background-color: black; color: white; border-radius: 10px;">
 
-Wir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, mit der Benutzer ihr Erlebnis personalisieren können, indem sie die Hintergrund- und Schriftfarben ändern.
+# Anpassen des oberen Headers mit Farbauswahl
 
-Dieser Leitfaden führt Sie durch die Änderungen, die an top-header.html vorgenommen wurden, um diese Funktion hinzuzufügen.
+Wir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, die es den Benutzern ermöglicht, ihr Erlebnis zu personalisieren, indem sie die Hintergrund- und Schriftfarben ändern.
+
+Dieser Leitfaden führt Sie durch die Änderungen, die an der top-header.html vorgenommen wurden, um diese Funktionalität hinzuzufügen. Am Ende sollten Sie in der Lage sein, diese Funktionalität nachzubilden.
+
+</div>
+
 
 ## Einführung
 

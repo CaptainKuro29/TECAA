@@ -6,21 +6,21 @@
     <description>Recent content on Lotus Docs Beispiel Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Tue, 23 Apr 2024 20:04:41 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2024 23:24:28 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deployment</title>
       <link>//localhost:1313/de/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/deployment/</guid>
-      <description>Bereitstellen einer Hugo-Website mit Netlify linkDieser Leitfaden hilft Ihnen dabei, Ihre Hugo-Website mithilfe von Netlify zu veröffentlichen, einer Plattform für die Bereitstellung von statischen Websites.&#xA;Bevor Sie beginnen linkStellen Sie sicher, dass Sie Folgendes haben:&#xA;Ein fertiges Hugo-Website-Projekt. Ein angemeldetes Konto bei Netlify. Hugo auf Ihrem Computer installiert. Schritte link1. Registrieren Sie sich bei Netlify linkFalls noch nicht geschehen, erstellen Sie ein Konto bei Netlify. Das geht schnell und ist kostenlos.</description>
+      <description>Bereitstellen einer Hugo-Website mit Netlify linkDieser Leitfaden hilft Ihnen dabei, Ihre Hugo-Website mithilfe von Netlify zu veröffentlichen, einer Plattform für die Bereitstellung von statischen Websites.&#xA;Bevor Sie beginnen linkStellen Sie sicher, dass Sie Folgendes haben:&#xA;Ein fertiges Hugo-Website-Projekt. Ein angemeldetes Konto bei Netlify. Hugo auf Ihrem Computer installiert. Schritte linkRegistrieren Sie sich bei Netlify linkFalls noch nicht geschehen, erstellen Sie ein Konto bei Netlify. Das geht schnell und ist kostenlos.</description>
     </item>
     <item>
       <title>Farbauswahl</title>
       <link>//localhost:1313/de/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/color-picking/</guid>
-      <description>Anpassung des oberen Headers mit Farbauswahl linkWir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, mit der Benutzer ihr Erlebnis personalisieren können, indem sie die Hintergrund- und Schriftfarben ändern.&#xA;Dieser Leitfaden führt Sie durch die Änderungen, die an top-header.html vorgenommen wurden, um diese Funktion hinzuzufügen.&#xA;Einführung linkDer obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.&#xA;Diese Ergänzung verbessert das Benutzerengagement, indem sie eine anpassbarere Benutzeroberfläche bietet.</description>
+      <description>Anpassen des oberen Headers mit Farbauswahl linkWir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, die es den Benutzern ermöglicht, ihr Erlebnis zu personalisieren, indem sie die Hintergrund- und Schriftfarben ändern.&#xA;Dieser Leitfaden führt Sie durch die Änderungen, die an der top-header.html vorgenommen wurden, um diese Funktionalität hinzuzufügen. Am Ende sollten Sie in der Lage sein, diese Funktionalität nachzubilden.&#xA;Einführung linkDer obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.</description>
     </item>
     <item>
       <title>Implementierung der Farbauswahlseite</title>

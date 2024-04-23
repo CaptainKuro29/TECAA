@@ -11,11 +11,17 @@ publishdate: "2023-05-03T22:37:22+01:00"
 tags: ["Beginners"]
 ---
 
+<div style="border: 2px solid black; padding: 20px; background-color: black; border-radius: 10px;">
+
 # Customizing the Top Header with Color Pickers
 
 We've introduced an interactive feature to the top header of our site, allowing users to personalize their experience by changing the background and font colors. 
 
-This guide will walk you through the changes made to top-header.html to add this functionality.
+This guide will walk you through the changes made to top-header.html to add this functionality. In the end you should be able to recreate this functionality.
+
+</div>
+
+
 
 ## Introduction
 

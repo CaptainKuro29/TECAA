@@ -50,16 +50,9 @@ Option 2 : Accédez au dossier contenant votre site Hugo. Installez Netlify avec
 ```shell
 npm install -g netlify-cli
 ```
-Après l'installation, tapez :
+Après l'installation, tapez la ligne suivante et suivez les instructions:
 ```shell 
 netlify deploy prod
 ```
-et suivez les instructions.
 
-### 6. Access Your Site
-
-After the build is complete, Netlify will give you a URL to view your deployed site.
-
-## Conclusion
-
-You've successfully deployed your Hugo website with Netlify! Explore Netlify's additional features to enhance your site further.
+Après la construction est terminée, Netlify vous fournira une URL pour visualiser votre site déployé. Vous avez réussi à déployer votre site Hugo avec Netlify ! Explorez les fonctionnalités supplémentaires de Netlify pour améliorer votre site davantage.

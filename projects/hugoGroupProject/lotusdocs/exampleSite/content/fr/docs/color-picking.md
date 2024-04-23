@@ -11,11 +11,16 @@ publishdate: "2023-05-03T22:37:22+01:00"
 tags: ["Débutants"]
 ---
 
+<div style="border: 2px solid black; padding: 20px; background-color: black; color: white; border-radius: 10px;">
+
 # Personnalisation de l'en-tête supérieur avec des sélecteurs de couleur
 
-Nous avons introduit une fonctionnalité interactive dans l'en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.
+Nous avons introduit une fonctionnalité interactive dans l'en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en modifiant les couleurs de fond et de police.
 
-Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.
+Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité. À la fin, vous devriez être en mesure de recréer cette fonctionnalité.
+
+</div>
+
 
 ## Introduction
 

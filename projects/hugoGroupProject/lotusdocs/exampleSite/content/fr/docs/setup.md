@@ -3,28 +3,28 @@ weight: 100
 date: "2023-05-03T22:37:22+01:00"
 draft: false
 author: "Pedro Simoes"
-title: "Setup"
+title: "Configuration"
 icon: "rocket_launch"
 toc: true
-description: "A quickstart guide to creating new content in Lotus Docs"
+description: "Un guide de démarrage rapide pour créer un nouveau contenu dans Lotus Docs"
 publishdate: "2023-05-03T22:37:22+01:00"
-tags: ["Beginners"]
+tags: ["Débutants"]
 ---
 
-## Requirements
+## Exigences
 
 - **git**
 - **Go ≥ v1.19**
-- **Hugo ≥ v0.100.0** (Extended Version)
+- **Hugo ≥ v0.100.0** (Version étendue)
 
-## Install Hugo
+## Installer Hugo
 
-Install the [Hugo CLI](https://github.com/gohugoio/hugo/releases/latest), using the specific instructions for your operating system below:
+Installez la [CLI de Hugo](https://github.com/gohugoio/hugo/releases/latest) en suivant les instructions spécifiques à votre système d'exploitation ci-dessous :
 
 {{< tabs tabTotal="4">}}
 {{% tab tabName="Linux" %}}
 
-Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:
+Le gestionnaire de paquets de votre distribution Linux peut inclure Hugo. Si c'est le cas, installez-le directement à l'aide du gestionnaire de paquets de votre distribution - par exemple, sous Ubuntu, exécutez la commande suivante. Cela installera la version étendue de Hugo :
 
 ```shell
 sudo apt install hugo
@@ -33,7 +33,7 @@ sudo apt install hugo
 {{% /tab %}}
 {{% tab tabName="Homebrew (macOS)" %}}
 
-If you use the package manager [Homebrew](https://brew.sh/), run the `brew install` command in your terminal to install Hugo:
+Si vous utilisez le gestionnaire de paquets [Homebrew](https://brew.sh/), exécutez la commande `brew install` dans votre terminal pour installer Hugo :
 
 ```shell
 brew install hugo
@@ -42,7 +42,7 @@ brew install hugo
 {{% /tab %}}
 {{% tab tabName="Windows (Chocolatey)" %}}
 
-If you use the package manager [Chocolatey](https://chocolatey.org/), run the `choco install` command in your terminal to install Hugo:
+Si vous utilisez le gestionnaire de paquets [Chocolatey](https://chocolatey.org/), exécutez la commande `choco install` dans votre terminal pour installer Hugo :
 
 ```shell
 choco install hugo --confirm
@@ -51,7 +51,7 @@ choco install hugo --confirm
 {{% /tab %}}
 {{% tab tabName="Windows (Scoop)" %}}
 
-If you use the package manager [Scoop](https://scoop.sh/), run the `scoop install` command in your terminal to install Hugo:
+Si vous utilisez le gestionnaire de paquets [Scoop](https://scoop.sh/), exécutez la commande `scoop install` dans votre terminal pour installer Hugo :
 
 ```shell
 scoop install hugo
@@ -60,39 +60,39 @@ scoop install hugo
 {{% /tab %}}
 {{< /tabs >}}
 
-### Manual Installation
+### Installation manuelle
 
-The Hugo GitHub repository contains pre-built versions of the Hugo command-line tool for various operating systems, which can be found on the [Releases page](https://github.com/gohugoio/hugo/releases/latest)
+Le référentiel GitHub de Hugo contient des versions pré-construites de l'outil en ligne de commande Hugo pour différents systèmes d'exploitation, qui peuvent être trouvées sur la [page des versions](https://github.com/gohugoio/hugo/releases/latest)
 
-For more instruction on installing these releases, refer to [Hugo’s documentation](https://gohugo.io/getting-started/installing/)
+Pour plus d'instructions sur l'installation de ces versions, reportez-vous à la [documentation de Hugo](https://gohugo.io/getting-started/installing/)
 
-## Create a New Lotus Docs Site
+## Créer un nouveau site Lotus Docs
 
-With Hugo installed, create a new Hugo project using the `hugo new` command:
+Avec Hugo installé, créez un nouveau projet Hugo en utilisant la commande `hugo new` :
 
 ```shell
 hugo new site my-docs-site && cd my-docs-site
 ```
 
-Now initialize your project as a Hugo Module using the `hugo mod init` command:
+Initialisez maintenant votre projet en tant que module Hugo en utilisant la commande `hugo mod init` :
 
 ```
 hugo mod init my-docs-site
 ```
 
-{{% alert context="info" text="**Note**: If your site already has a git repository, you can initialise your site using the path to your site's git repository e.g. `hugo mod init github.com/<user>/<my-docs-site>/`." /%}}
+{{% alert context="info" text="**Remarque**: Si votre site a déjà un dépôt git, vous pouvez initialiser votre site en utilisant le chemin vers le dépôt git de votre site, par exemple`hugo mod init github.com/<utilisateur>/<my-docs-site>/`." /%}}
 
-You can now choose your preferred method for adding the Lotus Docs theme to your new site from the options below:
+Vous pouvez maintenant choisir votre méthode préférée pour ajouter le thème Lotus Docs à votre nouveau site parmi les options ci-dessous:
 
 {{< tabs tabTotal="3">}}
-{{% tab tabName="Add as a Hugo Module" %}}
+{{% tab tabName="Ajouter en tant que module Hugo" %}}
 
-Edit the `hugo.toml` configuration file to include the [Lotus Docs theme](https://github.com/colinwilson/lotusdocs) and the [Hugo Bootstrap module](https://github.com/gohugoio/hugo-mod-bootstrap-scss) (lines `5 to 11` below):
+Modifiez le fichier de configuration `hugo.toml` pour inclure le [thème Lotus Docs](https://github.com/colinwilson/lotusdocs) et le [module Hugo Bootstrap](https://github.com/gohugoio/hugo-mod-bootstrap-scss)  (ligne `5 à 11` ci-dessous):
 
 ```toml {linenos=table,hl_lines=["5-11"]}
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr-fr'
+title = 'Mon nouveau site Hugo'
 
 [module]
     [[module.imports]]
@@ -102,24 +102,24 @@ title = 'My New Hugo Site'
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 ```
-{{% alert context="info" text="**Note**: Hugo ≥ v0.110.0 changed the name of the default config base filename to `hugo.toml`. If you're running an earlier version of Hugo, consider renaming your `config.toml` file to `hugo.toml`." /%}}
+{{% alert context="info" text="**Remarque**: Hugo ≥ v0.110.0 a changé le nom du fichier de configuration de base par défaut en `hugo.toml`. Si vous utilisez une version antérieure de Hugo, envisagez de renommer votre fichier `config.toml` en `hugo.toml`." /%}}
 
 {{% /tab %}}
-{{% tab tabName="Add as a Git submodule" %}}
+{{% tab tabName="Ajouter en tant que sous-module Git" %}}
 
-Initialize Git and clone the Lotus Docs theme repository as a submodule:
+Initialisez Git et clonez le référentiel du thème Lotus Docs en tant que sous-module :
 
 ```shell
 git init
 git submodule add https://github.com/colinwilson/lotusdocs themes/lotusdocs
 ```
 
-Update your existing `hugo.toml` config file with the configuration below:
+Mettez à jour votre fichier de configuration `hugo.toml` existant avec la configuration ci-dessous :
 
 ```toml {linenos=table,hl_lines=["5-11"]}
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr-fr'
+title = 'Mon nouveau site Hugo'
 
 [module]
     [[module.imports]]
@@ -130,25 +130,25 @@ title = 'My New Hugo Site'
         disable = false
 ```
 
-{{% alert context="info" text="**Note**: Hugo ≥ v0.110.0 changed the name of the default config base filename to `hugo.toml`. If you're running an earlier version of Hugo, consider renaming your `config.toml` file to `hugo.toml`." /%}}
+{{% alert context="info" text="**Remarque**: Hugo ≥ v0.110.0 a changé le nom du fichier de configuration de base par défaut en `hugo.toml`. Si vous utilisez une version antérieure de Hugo, envisagez de renommer votre fichier `config.toml` en `hugo.toml`." /%}}
 
 {{% /tab %}}
-{{% tab tabName="Clone theme files" %}}
+{{% tab tabName="Cloner les fichiers du thème" %}}
 
-In cases where you prefer to customise and maintain the Lotus Docs theme yourself, you can clone the theme into your project’s `themes` subdirectory.
+Dans les cas où vous préférez personnaliser et maintenir vous-même le thème Lotus Docs, vous pouvez cloner le thème dans le sous-répertoire `themes` de votre projet.
 
-Run the following command from your project’s root directory to clone the Lotus Docs theme into your `themes` subdirectory:
+Exécutez la commande suivante depuis le répertoire racine de votre projet pour cloner le thème Lotus Docs dans votre sous-répertoire `themes`:
 
 ```shell
 git clone https://github.com/colinwilson/lotusdocs themes/lotusdocs
 ```
 
-Edit the `hugo.toml` configuration file to include the Lotus Docs theme and the Hugo Bootstrap module (lines `5 to 11` below):
+Modifiez le fichier de configuration `hugo.toml` pour inclure le thème Lotus Docs et le module Hugo Bootstrap (lignes `5 à 11` ci-dessous) :
 
 ```toml {linenos=table,hl_lines=["5-11"]}
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr-fr'
+title = 'Mon nouveau site Hugo'
 
 [module]
     [[module.imports]]
@@ -158,24 +158,24 @@ title = 'My New Hugo Site'
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 ```
-{{< alert context="info" text="**Note**: Hugo ≥ v0.110.0 changed the name of the default config base filename to `hugo.toml`. If you're running an earlier version of Hugo, consider renaming your `config.toml` file to `hugo.toml`." />}}
+{{< alert context="info" text="**Remarque**: Hugo ≥ v0.110.0 a changé le nom du fichier de configuration de base par défaut en `hugo.toml`. Si vous utilisez une version antérieure de Hugo, envisagez de renommer votre fichier `config.toml` en `hugo.toml`." />}}
 
 {{% /tab %}}
 {{< /tabs >}}
 
-## Create New Content
+## Créer un nouveau contenu
 
-Navigate to the root of your Hugo project and use the `hugo new` command to create a file in the `content/docs` directory:
+Accédez à la racine de votre projet Hugo et utilisez la commande `hugo new` pour créer un fichier dans le répertoire `content/docs`:
 
 ```shell
 hugo new docs/example-page.md
 ```
 
-This will create a markdown file named `example-page.md` with the following default front matter:
+Cela créera un fichier markdown nommé `page-exemple.md` avec la frontière par défaut suivante :
 
 ```toml
 +++
-title = "Example Page"
+title = "Page Exemple"
 description = ""
 icon = "article"
 date = "2023-05-22T00:27:57+01:00"
@@ -186,9 +186,9 @@ weight = 999
 +++
 ```
 
-Modify the options to suit your needs.
+Modifiez les options selon vos besoins.
 
-The code below shows the front matter code used to create this page, along with a portion of markdown from the body:
+Le code ci-dessous montre le code de la frontière utilisé pour créer cette page, ainsi qu'une partie du markdown du corps :
 
 {{< prism lang="md" >}}
 +++
@@ -196,17 +196,17 @@ weight = 100
 date = "2023-05-03T22:37:22+01:00"
 draft = true
 author = "Colin Wilson"
-title = "Quickstart"
+title = "Démarrage rapide"
 icon = "rocket_launch"
 toc = true
-description = "A quickstart guide to creating new content in Lotus Docs"
+description = "Un guide de démarrage rapide pour créer un nouveau contenu dans Lotus Docs"
 publishdate = "2023-05-03T22:37:22+01:00"
-tags = ["Beginners"]
+tags = ["Débutants"]
 +++
 
-## Create New Content
+## Créer un nouveau contenu
 
-Navigate to the root of your Hugo project and use the `hugo new` command to create a file in the `content/docs` directory:
+Accédez à la racine de votre projet Hugo et utilisez la commande `hugo new` pour créer un fichier dans le répertoire `content/docs`:
 
 ```shell
 hugo new docs/examplepage.md
@@ -214,31 +214,31 @@ hugo new docs/examplepage.md
 ...
 {{< /prism >}}
 
-## Preview your Site
+## Prévisualisez votre site
 
-Now that you've created some sample content you can preview your new Lotus Docs site using the `huge server` command:
+Maintenant que vous avez créé un contenu d'exemple, vous pouvez prévisualiser votre nouveau site Lotus Docs en utilisant la commande `hugo server`:
 
 ```shell
 hugo server -D
 ```
 
-Navigate to `localhost:1313/docs` and you should see a card link to the **Example Page** created earlier:
+Accédez à `localhost:1313/docs` et vous devriez voir un lien de carte vers la **Page Exemple** créée précédemment :
 
 ![New Lotus Docs Site - Example Content](https://res.cloudinary.com/lotuslabs/image/upload/v1690992310/Lotus%20Docs/images/lotus_docs_new_site_and_content_module_setup_oiuyex.png)
 
-## Ordering Content
+## Ordre du contenu
 
-Lotus Docs uses a simple weighting method for ordering content and creating menus.
+Lotus Docs utilise une méthode de pondération simple pour ordonner le contenu et créer des menus.
 
-The front matter `weight` variable is used to order all content and auto-generate the menu structure (including the sidebar menu and page navigation buttons). Lower weight values take higher precedence. So content with lower weights come first and are so ordered in the menu.
+La variable `weight` de la frontière est utilisée pour ordonner tout le contenu et générer automatiquement la structure du menu (y compris le menu latéral et les boutons de navigation de page). Les valeurs de poids inférieures ont une priorité plus élevée. Ainsi, le contenu avec des poids inférieurs vient en premier et est ainsi ordonné dans le menu.
 
-## Auto-Generated Menu
+## Menu auto-généré
 
-As mentioned, Lotus Docs auto-generates menus and navigation links using the [front matter](https://gohugo.io/content-management/front-matter/#predefined) weight variable. For example, Navigate to the `content/docs` directory and create two content files, `doc-one.md` and `doc-two.md`, then edit the weight values to `100` and `200` respectively:
+Comme mentionné précédemment, Lotus Docs génère automatiquement des menus et des liens de navigation en utilisant la variable de poids [front matter](https://gohugo.io/content-management/front-matter/#predefined). Par exemple, accédez au répertoire `content/docs` et créez deux fichiers de contenu, `doc-one.md` et `doc-two.md`, puis modifiez les valeurs de poids respectivement à `100` et `200`:
 
-{{< alert text="It's good practice to increment the weight of your posts by a factor of <code>100</code>. This ensures plenty of room to insert new posts between existing items should you need to." />}}
+{{< alert text="Il est recommandé d'augmenter le poids de vos articles d'un facteur de <code>100</code>. Cela garantit suffisamment d'espace pour insérer de nouveaux articles entre les éléments existants si nécessaire." />}}
 
-Your directory structure should now look like this:
+Votre structure de répertoire devrait maintenant ressembler à ceci:
 
 ```treeview
 content/
@@ -247,21 +247,21 @@ content/
     └── doc-two.md
 ```
 
-Links to both posts are now visible in the sidebar menu where `doc-one.md` will come before and be placed above `doc-two.md`:
+Les liens vers les deux articles sont désormais visibles dans le menu latéral où `doc-one.md` viendra avant et sera placé au-dessus de `doc-two.md`:
 
 ![sidebar menu items example](https://res.cloudinary.com/lotuslabs/image/upload/v1684719173/Lotus%20Docs/images/sidebar_menu_example_01-modified_qkb2si.png)
 
-{{< alert context="info" text="The option to manually configure a predefined menu structure in <code>hugo.toml</code> as opposed to an auto-generated one is part of the Lotus Docs roadmap." />}}
+{{< alert context="info" text="L'option de configurer manuellement une structure de menu prédéfinie dans <code>hugo.toml</code> au lieu d'une auto-générée fait partie de la feuille de route de Lotus Docs." />}}
 
-## Second Level Menu Items
+## Éléments de menu de deuxième niveau
 
-Second level menu items can be generated by first creating a **'parent'** directory containing an `_index.md` file, e.g.:
+Les éléments de menu de deuxième niveau peuvent être générés en créant d'abord un **répertoire parent** contenant un fichier `_index.md`, par exemple:
 
 ```shell
 hugo new docs/parent-directory/_index.md
 ```
 
-The above command creates an `_index.md` file inside a directory named `parent-directory` under `content/docs`:
+La commande ci-dessus crée un fichier `_index.md` à l'intérieur d'un répertoire nommé `repertoire-parent` sous `content/docs`:
 
 ```treeview
 content/
@@ -273,13 +273,13 @@ content/
     └── _index.md
 ```
 
-You can now create second level items inside the `parent-directory` as normal. Run the `hugo new` command again to create a post inside the newly created `parent-directory`:
+Vous pouvez maintenant créer des éléments de deuxième niveau à l'intérieur du `repertoire-parent` comme d'habitude. Exécutez à nouveau la commande `hugo new` pour créer un article à l'intérieur du `repertoire-parent` nouvellement créé :
 
 ```shell
 hugo new docs/parent-directory/doc-three.md
 ```
 
-Your directory/file structure should now look like this:
+Votre structure de répertoire/fichier devrait maintenant ressembler à ceci :
 
 ```treeview
 content/
@@ -292,6 +292,6 @@ content/
     └── _index.md
 ```
 
-This is reflected in the sidebar menu with `parent-directory` functioning as a dropdown menu containing a link to the **Doc Three** post:
+Cela se reflète dans le menu latéral avec `repertoire-parent` fonctionnant comme un menu déroulant contenant un lien vers l'article **Doc Trois**:
 
 ![sidebar parent menu example](https://res.cloudinary.com/lotuslabs/image/upload/v1684802032/Lotus%20Docs/images/sidebar_menu_example_02_jsecye.png)

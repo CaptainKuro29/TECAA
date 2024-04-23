@@ -3,31 +3,30 @@ weight: 100
 date: "2023-05-03T22:37:22+01:00"
 draft: false
 author: "Ricardo Mascarenhas"
-title: "Implémentation de la page de sélection de couleur"
+title: "Implementaçao Seleção de Cores"
 icon: "rocket_launch"
 toc: true
-description: "Un guide pour mettre en œuvre la page de sélection de couleur"
+description: "Um guia para criar funcionalidade de seleção de cores no Lotus Docs"
 publishdate: "2023-05-03T22:37:22+01:00"
-tags: ["Débutants"]
+tags: ["Iniciantes"]
 ---
 
-## Introduction
-Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.
+## Introdução
+Nesta página, é possível seguir um guia passo a passo que tem como objetivo educar o leitor sobre como criar uma página de seleção de cores neste site.
 
-## Configuration
-1. Installer Hugo et Go
-       
-    Si vous n'avez pas encore installé Hugo et Go, vous pouvez consulter les directives d'installation fournies dans [Installation de Hugo](https://gohugo.io/installation/). Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.
-       
-    N'oubliez pas les prérequis. Vous devriez avoir besoin de la commande suivante ou similaire : `choco install hugo-extended` (Windows) ou `brew install hugo` (Mac), par exemple.
+## Configuração
+1. Instale o Hugo e o Go
 
-    Vérifiez la version avec : `hugo version`.
+Se ainda não instalou o Hugo e o Go, pode consultar as diretrizes de instalação fornecidas em Instalação do Hugo. Se já os tiver instalado, pode ignorar este passo e avançar diretamente para o próximo.
 
-    Vérifiez comment installer Go ([Installation de Go](https://go.dev/dl/)) et procédez à l'installation, vérifiez que tout est bon à la fin : `go version`.
+Não se esqueça dos pré-requisitos. Pode precisar do seguinte comando ou similar: choco install hugo-extended (Windows) ou brew install hugo (Mac), por exemplo.
 
-2. Télécharger le thème Lotus Docs
-       
-    Utilisez le projet d'exemple Lotus Docs comme modèle. Commencez par cloner le dépôt depuis [Répertoire GitHub de Lotus Docs](https://github.com/colinwilson/lotusdocs) et passez au dossier exampleSite. Là, exécutez la commande suivante : `hugo server`. Vous devriez maintenant voir quelque chose comme la Figure 1.
+Verifique a versão usando: hugo version.
+
+Verifique como instalar o Go (Instalação do Go) e prossiga com a instalação, verificando se está tudo bem no final: go version.
+
+2. Faça o download do tema Lotus DocsUtilize o projeto de exemplo Lotus Docs como modelo. 
+Comece clonando o repositório em Repositório GitHub do Lotus Docs e alterando para a pasta exampleSite. Lá, execute o seguinte comando: hugo server. Agora deverá ver algo semelhante à Figura 1.
 
   ```shell
                    | EN  | FR  | DE
@@ -41,10 +40,11 @@ Sur cette page, il est possible de suivre un guide étape par étape qui vise à
   Cleaned          |   0 |   0 |   0
 
 ```
- Votre site Web devrait être disponible à l'adresse http://localhost:1313/
+O seu site deverá estar disponível em http://localhost:1313/.
 
 ## Code MD
-Maintenant, vous pouvez copier et coller le code suivant dans le fichier désiré, puis enregistrer et aller sur le site Web pour vérifier les résultats.
+Agora você pode copiar e colar o seguinte código no arquivo desejado. Em seguida, guarde e verifique os resultados..
+
 
   ```shell
 ---
@@ -52,51 +52,41 @@ weight: 100
 date: "2023-05-03T22:37:22+01:00"
 draft: false
 author: "Ricardo Mascarenhas"
-title: "Choix de la couleur"
+title: "Seleção de Cores"
 icon: "rocket_launch"
 toc: true
-description: "Un guide pour créer la fonctionnalité de sélection de couleur dans Lotus Docs"
+description: "Um guia para criar funcionalidade de seleção de cores no Lotus Docs"
 publishdate: "2023-05-03T22:37:22+01:00"
-tags: ["Débutants"]
+tags: ["Iniciantes"]
 ---
 
-# Personnalisation de l'en-tête supérieur avec des sélecteurs de couleur
+# Personalização do Cabeçalho Superior com Selecionadores de Cores
+Introduzimos uma funcionalidade interativa no cabeçalho superior do nosso site, permitindo aos utilizadores personalizarem a sua experiência ao alterar as cores de fundo e da fonte.
 
-Nous avons introduit une fonctionnalité interactive dans l'en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en modifiant les couleurs d'arrière-plan et de police.
+Este guia irá orientá-lo pelas alterações feitas no arquivo top-header.html para adicionar esta funcionalidade.
 
-Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.
+## Introdução
+O cabeçalho superior do nosso site agora inclui dois selecionadores de cores: um para a cor de fundo e outro para a cor da fonte.
 
-## Introduction
+Esta adição melhora o envolvimento do utilizador, proporcionando uma interface mais personalizável.
 
-L'en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur d'arrière-plan et un autre pour la couleur de police.
+#### Detalhes da Implementação
+Adicionar os Selecionadores de Cores
+Adicionamos dois elementos de entrada HTML do tipo cor ao cabeçalho superior. Estes inputs permitem aos utilizadores selecionar cores, que são então aplicadas ao fundo da página e à cor da fonte.
 
-Cette addition améliore l'engagement des utilisateurs en offrant une interface plus personnalisable.
+####Estilizar os Selecionadores de Cores
+CSS em linha foi utilizado para estilizar os selecionadores de cores, garantindo que se misturam perfeitamente com o design do site. Os estilos incluem definir a altura, remover a borda e adicionar um raio de borda para que os selecionadores pareçam arredondados.
 
-## Détails de l'implémentation
+####Script para Alterações de Cor
+Um trecho de JavaScript foi adicionado para ouvir as alterações de cor através dos selecionadores de cores e aplicar essas alterações às cores de fundo e da fonte do site de forma dinâmica.
 
-#### Ajout des sélecteurs de couleur
+####Como Funciona
+Quando o documento está totalmente carregado, o script fica à escuta de um evento "change" em cada selecionador de cores.
 
-Nous avons ajouté deux éléments d'entrée HTML de type couleur à l'en-tête supérieur. Ces entrées permettent aux utilisateurs de sélectionner des couleurs, qui sont ensuite appliquées à l'arrière-plan et aux couleurs de police de la page.
+Alterar o valor do selecionador de cor de fundo atualiza a cor de fundo de toda a página para corresponder à cor selecionada.
 
-#### Stylisation des sélecteurs de couleur
+Da mesma forma, alterar o valor do selecionador de cor da fonte atualiza a cor do texto em todo o site.
 
-Du CSS en ligne a été utilisé pour styliser les sélecteurs de couleur, en veillant à ce qu'ils se fondent harmonieusement dans le design du site. Les styles incluent le réglage de la hauteur, la suppression de la bordure et l'ajout d'un rayon de bordure pour que les sélecteurs semblent arrondis.
-
-#### Scripting des changements de couleur
-
-Un extrait de code JavaScript a été ajouté pour écouter les changements de couleur via les sélecteurs de couleur et appliquer ces changements aux couleurs d'arrière-plan et de police du site Web de manière dynamique.
-
-## Comment ça marche
-
-Lorsque le document est entièrement chargé, le script écoute un événement "changement" sur chaque sélecteur de couleur.
-
-Le changement de la valeur du sélecteur de couleur d'arrière-plan met à jour la couleur d'arrière-plan de la page entière pour correspondre à la couleur sélectionnée.
-
-De même, le changement de la valeur du sélecteur de couleur de police met à jour la couleur du texte sur l'ensemble du site.
-
-## Conclusion
-
-Grâce à ces améliorations, notre site offre désormais une expérience utilisateur plus interactive et personnalisée. Les visiteurs peuvent personnaliser l'apparence du site selon leurs préférences, rendant leur expérience de navigation plus agréable.
-
-[Comment cette page a-t-elle été implémentée ?](/docs/color-picking-implementation/)
+##Conclusão
+Com estas melhorias, o nosso site oferece agora uma experiência de utilizador mais interativa e personalizada. Os visitantes podem personalizar o visual do site de acordo com as suas preferências, tornando a sua experiência de navegação mais agradável.
 ```

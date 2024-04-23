@@ -6,7 +6,7 @@
     <description>Recent content on Lotus Docs Exemple de Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 23 Apr 2024 20:04:41 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 00:40:16 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>À propos</title>
@@ -14,6 +14,13 @@
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/about/</guid>
       <description>Bienvenue dans notre projet de documentation technique linkCe projet fait partie de notre cours de génie informatique. Il vous offre une aide pratique pour construire et gérer des sites Web de documentation technique. Nous utilisons des technologies Web modernes et suivons les meilleures pratiques de l&amp;rsquo;industrie pour vous aider à bien apprendre la documentation technique.&#xA;Ce que nous visons à faire linkNous sommes ici pour aider les développeurs, nouveaux et expérimentés, à comprendre comment créer des sites Web de documentation.</description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>//localhost:1313/fr/docs/setup/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/fr/docs/setup/</guid>
+      <description>Exigences link git Go ≥ v1.19 Hugo ≥ v0.100.0 (Version étendue) Installer Hugo linkInstallez la CLI de Hugo en suivant les instructions spécifiques à votre système d&amp;rsquo;exploitation ci-dessous :&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Le gestionnaire de paquets de votre distribution Linux peut inclure Hugo. Si c&amp;rsquo;est le cas, installez-le directement à l&amp;rsquo;aide du gestionnaire de paquets de votre distribution - par exemple, sous Ubuntu, exécutez la commande suivante.</description>
     </item>
     <item>
       <title>Deployment</title>
@@ -41,14 +48,7 @@
       <link>//localhost:1313/fr/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/color-picking/</guid>
-      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur linkNous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.&#xA;Introduction linkL&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
-    </item>
-    <item>
-      <title>Setup</title>
-      <link>//localhost:1313/fr/docs/setup/</link>
-      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
-      <guid>//localhost:1313/fr/docs/setup/</guid>
-      <description>Requirements link git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo linkInstall the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
+      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur linkNous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en modifiant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité. À la fin, vous devriez être en mesure de recréer cette fonctionnalité.&#xA;Introduction linkL&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
     </item>
     <item>
       <title>Code</title>

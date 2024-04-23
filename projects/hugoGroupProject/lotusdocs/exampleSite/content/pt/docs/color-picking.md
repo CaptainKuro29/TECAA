@@ -3,31 +3,36 @@ weight: 100
 date: "2023-05-03T22:37:22+01:00"
 draft: false
 author: "Ricardo Mascarenhas"
-title: "Sélection des couleurs"
+title: "Seleçao de cores"
 icon: "rocket_launch"
 toc: true
-description: "Un guide pour créer une fonctionnalité de sélection de couleur dans Lotus Docs"
+description: "Um guia para criar uma funcionalidade de seleção de cores no Lotus Docs"
 publishdate: "2023-05-03T22:37:22+01:00"
-tags: ["Débutants"]
+tags: ["Iniciantes"]
 ---
 
-# Personnalisation de l'en-tête supérieur avec des sélecteurs de couleur
+<div style="border: 2px solid black; padding: 20px; background-color: black; color: white; border-radius: 10px;">
 
-Nous avons introduit une fonctionnalité interactive dans l'en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.
+# Personalização do Cabeçalho Superior com Seletor de Cores
 
-Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.
+Introduzimos uma funcionalidade interativa no cabeçalho superior do nosso site, permitindo que os usuários personalizem sua experiência alterando as cores de fundo e da fonte.
 
-## Introduction
+Este guia irá guiá-lo pelas alterações feitas no top-header.html para adicionar essa funcionalidade. No final, você deverá ser capaz de recriar essa funcionalidade.
 
-L'en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.
+</div>
 
-Cette addition améliore l'engagement des utilisateurs en fournissant une interface plus personnalisable.
 
-## Détails de l'implémentation
+## Introdução
 
-#### Ajout des sélecteurs de couleur
+O cabeçalho superior do nosso site agora inclui dois seletores de cores: um para a cor de fundo e outro para a cor da fonte.
 
-Nous avons ajouté deux éléments HTML de type couleur à l'en-tête supérieur. Ces entrées permettent aux utilisateurs de sélectionner des couleurs, qui sont ensuite appliquées à l'arrière-plan de la page et à la police.
+Essa adição melhora o envolvimento do usuário, proporcionando uma interface mais personalizável.
+
+## Detalhes de Implementação
+
+#### Adicionando os Seletores de Cores
+
+Adicionamos dois elementos HTML do tipo “color” ao cabeçalho superior. Esses campos permitem que os usuários escolham cores, que são então aplicadas ao fundo e à fonte da página.
 
 
 
@@ -44,17 +49,15 @@ Nous avons ajouté deux éléments HTML de type couleur à l'en-tête supérieur
     <!-- Color Picker End -->
 ```
 
-2. Stylisation des Sélecteurs de Couleur
+2. Estilização dos Seletores de Cor
+
+Utilizamos CSS inline para estilizar os seletores de cor, garantindo que eles se integrem perfeitamente ao design do site. Os estilos incluem definição de altura, remoção da borda e adição de um border-radius para que os seletores apareçam arredondados.
 
 
-Nous avons utilisé du CSS en ligne pour styliser les sélecteurs de couleur, garantissant qu'ils s'intègrent parfaitement au design du site. Les styles comprennent le réglage de la hauteur, la suppression de la bordure et l'ajout d'un border-radius pour que les sélecteurs apparaissent arrondis.
 
+#### Script para Alterações de Cor
 
-
-#### Script pour les Changements de Couleur
-
-Un extrait de code JavaScript a été ajouté pour écouter les changements de couleur via les sélecteurs de couleur et appliquer ces changements aux couleurs de fond et de police du site de manière dynamique.
-
+Foi adicionado um trecho de código JavaScript para ouvir as mudanças de cor através dos seletores de cor e aplicar essas mudanças às cores de fundo e de fonte do site de forma dinâmica.
 
 ```shell
 <!-- Script for Color Picker -->
@@ -77,14 +80,16 @@ Un extrait de code JavaScript a été ajouté pour écouter les changements de c
 ```
 
 
-## Fonctionnement
+## Funcionamento
 
-Lorsque le document est entièrement chargé, le script écoute un événement "change" sur chaque sélecteur de couleur.
+Quando o documento está totalmente carregado, o script escuta um evento "change" em cada seletor de cor.
 
-Le changement de la valeur du sélecteur de couleur de fond met à jour la couleur de fond de toute la page pour correspondre à la couleur sélectionnée.
+A alteração do valor do seletor de cor de fundo atualiza a cor de fundo de toda a página para corresponder à cor selecionada.
 
-De même, le changement de la valeur du sélecteur de couleur de police met à jour la couleur du texte sur l'ensemble du site.
+Da mesma forma, a alteração do valor do seletor de cor da fonte atualiza a cor do texto em todo o site.
 
-## Conclusion
+## Conclusão
 
-Grâce à ces améliorations, notre site offre désormais une expérience utilisateur plus interactive et personnalisée. Les visiteurs peuvent personnaliser l'apparence du site selon leurs préférences, rendant leur expérience de navigation plus agréable.
+Com estas melhorias, o site agora oferece uma experiência do usuário mais interativa e personalizada. Os visitantes podem personalizar a aparência do site de acordo com as suas preferências, tornando sua experiência de navegação mais agradável.
+
+[Como foi implementado](/docs/color-picking-implementation/)

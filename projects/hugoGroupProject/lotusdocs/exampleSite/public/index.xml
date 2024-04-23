@@ -6,7 +6,7 @@
     <description>Recent content on Lotus Docs Example Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Apr 2024 20:04:41 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 00:40:16 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>À propos</title>
@@ -48,21 +48,28 @@
       <link>//localhost:1313/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/docs/color-picking/</guid>
-      <description>Customizing the Top Header with Color Pickers linkWe&amp;rsquo;ve introduced an interactive feature to the top header of our site, allowing users to personalize their experience by changing the background and font colors.&#xA;This guide will walk you through the changes made to top-header.html to add this functionality.&#xA;Introduction linkThe top header of our website now includes two color pickers: one for the background color and another for the font color.</description>
+      <description>Customizing the Top Header with Color Pickers linkWe&amp;rsquo;ve introduced an interactive feature to the top header of our site, allowing users to personalize their experience by changing the background and font colors.&#xA;This guide will walk you through the changes made to top-header.html to add this functionality. In the end you should be able to recreate this functionality.&#xA;Introduction linkThe top header of our website now includes two color pickers: one for the background color and another for the font color.</description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>//localhost:1313/fr/docs/setup/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/fr/docs/setup/</guid>
+      <description>Exigences git Go ≥ v1.19 Hugo ≥ v0.100.0 (Version étendue) Installer Hugo Installez la CLI de Hugo en suivant les instructions spécifiques à votre système d&amp;rsquo;exploitation ci-dessous :&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Le gestionnaire de paquets de votre distribution Linux peut inclure Hugo. Si c&amp;rsquo;est le cas, installez-le directement à l&amp;rsquo;aide du gestionnaire de paquets de votre distribution - par exemple, sous Ubuntu, exécutez la commande suivante. Cela installera la version étendue de Hugo :</description>
     </item>
     <item>
       <title>Deployment</title>
       <link>//localhost:1313/de/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/deployment/</guid>
-      <description>Bereitstellen einer Hugo-Website mit Netlify Dieser Leitfaden hilft Ihnen dabei, Ihre Hugo-Website mithilfe von Netlify zu veröffentlichen, einer Plattform für die Bereitstellung von statischen Websites.&#xA;Bevor Sie beginnen Stellen Sie sicher, dass Sie Folgendes haben:&#xA;Ein fertiges Hugo-Website-Projekt. Ein angemeldetes Konto bei Netlify. Hugo auf Ihrem Computer installiert. Schritte 1. Registrieren Sie sich bei Netlify Falls noch nicht geschehen, erstellen Sie ein Konto bei Netlify. Das geht schnell und ist kostenlos.</description>
+      <description>Bereitstellen einer Hugo-Website mit Netlify Dieser Leitfaden hilft Ihnen dabei, Ihre Hugo-Website mithilfe von Netlify zu veröffentlichen, einer Plattform für die Bereitstellung von statischen Websites.&#xA;Bevor Sie beginnen Stellen Sie sicher, dass Sie Folgendes haben:&#xA;Ein fertiges Hugo-Website-Projekt. Ein angemeldetes Konto bei Netlify. Hugo auf Ihrem Computer installiert. Schritte Registrieren Sie sich bei Netlify Falls noch nicht geschehen, erstellen Sie ein Konto bei Netlify. Das geht schnell und ist kostenlos.</description>
     </item>
     <item>
       <title>Deployment</title>
       <link>//localhost:1313/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/docs/deployment/</guid>
-      <description>Deploy de um site Hugo com Netlify linkEste guia irá ajudá-lo a publicar o seu site Hugo usando o Netlify, uma plataforma para hospedar sites estáticos.&#xA;Antes de começar linkCertifique-se de que você tem:&#xA;Um projeto de site Hugo pronto. Uma conta registrada no Netlify. O Hugo instalado em seu computador. Passos link1. Registrar-se no Netlify linkSe ainda não o fez, crie uma conta no Netlify. É rápido e gratuito.</description>
+      <description>Deploying a Hugo Website with Netlify linkThis guide will help you deploy your Hugo website using Netlify. It is a platform for hosting static websites.&#xA;Before You Start linkMake sure you have:&#xA;A Hugo website project ready. Signed up for a Netlify account. Installed Hugo on your computer. Steps linkSign Up for Netlify linkCreate an account on Netlify, or login to an existent account.&#xA;Add Your Site to Netlify linkGo to the Netlify sites page and click “New site from Git.</description>
     </item>
     <item>
       <title>Deployment</title>
@@ -76,27 +83,27 @@
       <link>//localhost:1313/pt/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/pt/docs/deployment/</guid>
-      <description>Déploiement d&amp;rsquo;un site Hugo avec Netlify Ce guide vous aidera à publier votre site Hugo en utilisant Netlify, une plateforme pour héberger des sites statiques.&#xA;Avant de commencer Assurez-vous d&amp;rsquo;avoir :&#xA;Un projet de site Hugo prêt. Un compte enregistré sur Netlify. Hugo installé sur votre ordinateur. Étapes 1. S&amp;rsquo;inscrire sur Netlify Si ce n&amp;rsquo;est pas déjà fait, créez un compte sur Netlify. C&amp;rsquo;est rapide et gratuit.&#xA;2. Ajouter votre site à Netlify Allez sur la page &amp;ldquo;Sites&amp;rdquo; de Netlify et cliquez sur &amp;ldquo;Nouveau site depuis Git&amp;rdquo;.</description>
+      <description>Deploy de um site Hugo com Netlify Este guia irá ajudá-lo a publicar o seu site Hugo usando o Netlify, uma plataforma para hospedar sites estáticos.&#xA;Antes de começar Certifique-se de que você tem:&#xA;Um projeto de site Hugo pronto. Uma conta registrada no Netlify. O Hugo instalado em seu computador. Passos Registrar-se no Netlify Se ainda não o fez, crie uma conta no Netlify. É rápido e gratuito.&#xA;Adicionar seu site ao Netlify Acesse a página &amp;ldquo;Sites&amp;rdquo; do Netlify e clique em &amp;ldquo;Novo site a partir do Git&amp;rdquo;.</description>
     </item>
     <item>
       <title>Farbauswahl</title>
       <link>//localhost:1313/de/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/color-picking/</guid>
-      <description>Anpassung des oberen Headers mit Farbauswahl Wir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, mit der Benutzer ihr Erlebnis personalisieren können, indem sie die Hintergrund- und Schriftfarben ändern.&#xA;Dieser Leitfaden führt Sie durch die Änderungen, die an top-header.html vorgenommen wurden, um diese Funktion hinzuzufügen.&#xA;Einführung Der obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.&#xA;Diese Ergänzung verbessert das Benutzerengagement, indem sie eine anpassbarere Benutzeroberfläche bietet.</description>
+      <description>Anpassen des oberen Headers mit Farbauswahl Wir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, die es den Benutzern ermöglicht, ihr Erlebnis zu personalisieren, indem sie die Hintergrund- und Schriftfarben ändern.&#xA;Dieser Leitfaden führt Sie durch die Änderungen, die an der top-header.html vorgenommen wurden, um diese Funktionalität hinzuzufügen. Am Ende sollten Sie in der Lage sein, diese Funktionalität nachzubilden.&#xA;Einführung Der obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.</description>
+    </item>
+    <item>
+      <title>Implementaçao Seleção de Cores</title>
+      <link>//localhost:1313/pt/docs/color-picking-implementation/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking-implementation/</guid>
+      <description>Introdução Nesta página, é possível seguir um guia passo a passo que tem como objetivo educar o leitor sobre como criar uma página de seleção de cores neste site.&#xA;Configuração Instale o Hugo e o Go Se ainda não instalou o Hugo e o Go, pode consultar as diretrizes de instalação fornecidas em Instalação do Hugo. Se já os tiver instalado, pode ignorar este passo e avançar diretamente para o próximo.</description>
     </item>
     <item>
       <title>Implémentation de la page de sélection de couleur</title>
       <link>//localhost:1313/fr/docs/color-picking-implementation/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/color-picking-implementation/</guid>
-      <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les directives d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.</description>
-    </item>
-    <item>
-      <title>Implémentation de la page de sélection de couleur</title>
-      <link>//localhost:1313/pt/docs/color-picking-implementation/</link>
-      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
-      <guid>//localhost:1313/pt/docs/color-picking-implementation/</guid>
       <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les directives d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.</description>
     </item>
     <item>
@@ -128,18 +135,18 @@
       <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la manière de créer la page de sélection de couleur sur ce site web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les instructions d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et aller directement à la suivante.</description>
     </item>
     <item>
+      <title>Seleçao de cores</title>
+      <link>//localhost:1313/pt/docs/color-picking/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking/</guid>
+      <description>Personalização do Cabeçalho Superior com Seletor de Cores Introduzimos uma funcionalidade interativa no cabeçalho superior do nosso site, permitindo que os usuários personalizem sua experiência alterando as cores de fundo e da fonte.&#xA;Este guia irá guiá-lo pelas alterações feitas no top-header.html para adicionar essa funcionalidade. No final, você deverá ser capaz de recriar essa funcionalidade.&#xA;Introdução O cabeçalho superior do nosso site agora inclui dois seletores de cores: um para a cor de fundo e outro para a cor da fonte.</description>
+    </item>
+    <item>
       <title>Sélection des couleurs</title>
       <link>//localhost:1313/fr/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/color-picking/</guid>
-      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur Nous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.&#xA;Introduction L&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
-    </item>
-    <item>
-      <title>Sélection des couleurs</title>
-      <link>//localhost:1313/pt/docs/color-picking/</link>
-      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
-      <guid>//localhost:1313/pt/docs/color-picking/</guid>
-      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur Nous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.&#xA;Introduction L&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
+      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur Nous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en modifiant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité. À la fin, vous devriez être en mesure de recréer cette fonctionnalité.&#xA;Introduction L&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
     </item>
     <item>
       <title>Setup</title>
@@ -154,13 +161,6 @@
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/docs/setup/</guid>
       <description>Requirements link git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo linkInstall the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
-    </item>
-    <item>
-      <title>Setup</title>
-      <link>//localhost:1313/fr/docs/setup/</link>
-      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
-      <guid>//localhost:1313/fr/docs/setup/</guid>
-      <description>Requirements git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo Install the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
     </item>
     <item>
       <title>Setup</title>
