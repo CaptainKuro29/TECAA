@@ -6,7 +6,7 @@
     <description>Recent content in Docs on Lotus Docs Example Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Apr 2024 19:26:38 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2024 20:04:41 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
@@ -41,7 +41,7 @@
       <link>//localhost:1313/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/docs/deployment/</guid>
-      <description>Deploying a Hugo Website with Netlify linkThis guide will help you deploy your Hugo website using Netlify, a platform for hosting static websites.&#xA;Before You Start linkMake sure you have:&#xA;A Hugo website project ready. Signed up for a Netlify account. Installed Hugo on your computer. Steps link1. Sign Up for Netlify linkIf you haven&amp;rsquo;t already, create an account on Netlify. It&amp;rsquo;s quick and free.&#xA;2. Add Your Site to Netlify linkGo to the Netlify sites page and click &amp;ldquo;New site from Git.</description>
+      <description>Deploy de um site Hugo com Netlify linkEste guia irá ajudá-lo a publicar o seu site Hugo usando o Netlify, uma plataforma para hospedar sites estáticos.&#xA;Antes de começar linkCertifique-se de que você tem:&#xA;Um projeto de site Hugo pronto. Uma conta registrada no Netlify. O Hugo instalado em seu computador. Passos link1. Registrar-se no Netlify linkSe ainda não o fez, crie uma conta no Netlify. É rápido e gratuito.</description>
     </item>
     <item>
       <title>Setup</title>

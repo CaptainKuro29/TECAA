@@ -6,13 +6,20 @@
     <description>Recent content on Lotus Docs Example Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Apr 2024 19:26:38 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2024 20:04:41 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>À propos</title>
       <link>//localhost:1313/fr/docs/about/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/about/</guid>
+      <description>Bienvenue dans notre projet de documentation technique Ce projet fait partie de notre cours de génie informatique. Il vous offre une aide pratique pour construire et gérer des sites Web de documentation technique. Nous utilisons des technologies Web modernes et suivons les meilleures pratiques de l&amp;rsquo;industrie pour vous aider à bien apprendre la documentation technique.&#xA;Ce que nous visons à faire Nous sommes ici pour aider les développeurs, nouveaux et expérimentés, à comprendre comment créer des sites Web de documentation.</description>
+    </item>
+    <item>
+      <title>À propos</title>
+      <link>//localhost:1313/pt/docs/about/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/about/</guid>
       <description>Bienvenue dans notre projet de documentation technique Ce projet fait partie de notre cours de génie informatique. Il vous offre une aide pratique pour construire et gérer des sites Web de documentation technique. Nous utilisons des technologies Web modernes et suivons les meilleures pratiques de l&amp;rsquo;industrie pour vous aider à bien apprendre la documentation technique.&#xA;Ce que nous visons à faire Nous sommes ici pour aider les développeurs, nouveaux et expérimentés, à comprendre comment créer des sites Web de documentation.</description>
     </item>
     <item>
@@ -48,21 +55,28 @@
       <link>//localhost:1313/de/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/deployment/</guid>
-      <description>Requirements git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo Install the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
+      <description>Bereitstellen einer Hugo-Website mit Netlify Dieser Leitfaden hilft Ihnen dabei, Ihre Hugo-Website mithilfe von Netlify zu veröffentlichen, einer Plattform für die Bereitstellung von statischen Websites.&#xA;Bevor Sie beginnen Stellen Sie sicher, dass Sie Folgendes haben:&#xA;Ein fertiges Hugo-Website-Projekt. Ein angemeldetes Konto bei Netlify. Hugo auf Ihrem Computer installiert. Schritte 1. Registrieren Sie sich bei Netlify Falls noch nicht geschehen, erstellen Sie ein Konto bei Netlify. Das geht schnell und ist kostenlos.</description>
     </item>
     <item>
       <title>Deployment</title>
       <link>//localhost:1313/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/docs/deployment/</guid>
-      <description>Deploying a Hugo Website with Netlify linkThis guide will help you deploy your Hugo website using Netlify, a platform for hosting static websites.&#xA;Before You Start linkMake sure you have:&#xA;A Hugo website project ready. Signed up for a Netlify account. Installed Hugo on your computer. Steps link1. Sign Up for Netlify linkIf you haven&amp;rsquo;t already, create an account on Netlify. It&amp;rsquo;s quick and free.&#xA;2. Add Your Site to Netlify linkGo to the Netlify sites page and click &amp;ldquo;New site from Git.</description>
+      <description>Deploy de um site Hugo com Netlify linkEste guia irá ajudá-lo a publicar o seu site Hugo usando o Netlify, uma plataforma para hospedar sites estáticos.&#xA;Antes de começar linkCertifique-se de que você tem:&#xA;Um projeto de site Hugo pronto. Uma conta registrada no Netlify. O Hugo instalado em seu computador. Passos link1. Registrar-se no Netlify linkSe ainda não o fez, crie uma conta no Netlify. É rápido e gratuito.</description>
     </item>
     <item>
       <title>Deployment</title>
       <link>//localhost:1313/fr/docs/deployment/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/deployment/</guid>
-      <description>Requirements git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo Install the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
+      <description>Déploiement d&amp;rsquo;un site Hugo avec Netlify Ce guide vous aidera à publier votre site Hugo en utilisant Netlify, une plateforme pour héberger des sites statiques.&#xA;Avant de commencer Assurez-vous d&amp;rsquo;avoir :&#xA;Un projet de site Hugo prêt. Un compte enregistré sur Netlify. Hugo installé sur votre ordinateur. Étapes 1. S&amp;rsquo;inscrire sur Netlify Si ce n&amp;rsquo;est pas déjà fait, créez un compte sur Netlify. C&amp;rsquo;est rapide et gratuit.&#xA;2. Ajouter votre site à Netlify Allez sur la page &amp;ldquo;Sites&amp;rdquo; de Netlify et cliquez sur &amp;ldquo;Nouveau site depuis Git&amp;rdquo;.</description>
+    </item>
+    <item>
+      <title>Deployment</title>
+      <link>//localhost:1313/pt/docs/deployment/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/deployment/</guid>
+      <description>Déploiement d&amp;rsquo;un site Hugo avec Netlify Ce guide vous aidera à publier votre site Hugo en utilisant Netlify, une plateforme pour héberger des sites statiques.&#xA;Avant de commencer Assurez-vous d&amp;rsquo;avoir :&#xA;Un projet de site Hugo prêt. Un compte enregistré sur Netlify. Hugo installé sur votre ordinateur. Étapes 1. S&amp;rsquo;inscrire sur Netlify Si ce n&amp;rsquo;est pas déjà fait, créez un compte sur Netlify. C&amp;rsquo;est rapide et gratuit.&#xA;2. Ajouter votre site à Netlify Allez sur la page &amp;ldquo;Sites&amp;rdquo; de Netlify et cliquez sur &amp;ldquo;Nouveau site depuis Git&amp;rdquo;.</description>
     </item>
     <item>
       <title>Farbauswahl</title>
@@ -76,6 +90,13 @@
       <link>//localhost:1313/fr/docs/color-picking-implementation/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/color-picking-implementation/</guid>
+      <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les directives d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.</description>
+    </item>
+    <item>
+      <title>Implémentation de la page de sélection de couleur</title>
+      <link>//localhost:1313/pt/docs/color-picking-implementation/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking-implementation/</guid>
       <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la façon de créer la page de sélection de couleur sur ce site Web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les directives d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et passer directement à la suivante.</description>
     </item>
     <item>
@@ -100,10 +121,24 @@
       <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la manière de créer la page de sélection de couleur sur ce site web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les instructions d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et aller directement à la suivante.</description>
     </item>
     <item>
+      <title>Mise en Place de la Page À Propos</title>
+      <link>//localhost:1313/pt/docs/about-implement-fr/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/about-implement-fr/</guid>
+      <description>Introduction Sur cette page, il est possible de suivre un guide étape par étape qui vise à éduquer le lecteur sur la manière de créer la page de sélection de couleur sur ce site web.&#xA;Configuration Installer Hugo et Go&#xA;Si vous n&amp;rsquo;avez pas encore installé Hugo et Go, vous pouvez consulter les instructions d&amp;rsquo;installation fournies dans Installation de Hugo. Si vous les avez déjà installés, vous pouvez passer cette étape et aller directement à la suivante.</description>
+    </item>
+    <item>
       <title>Sélection des couleurs</title>
       <link>//localhost:1313/fr/docs/color-picking/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/fr/docs/color-picking/</guid>
+      <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur Nous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.&#xA;Introduction L&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
+    </item>
+    <item>
+      <title>Sélection des couleurs</title>
+      <link>//localhost:1313/pt/docs/color-picking/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking/</guid>
       <description>Personnalisation de l&amp;rsquo;en-tête supérieur avec des sélecteurs de couleur Nous avons introduit une fonctionnalité interactive dans l&amp;rsquo;en-tête supérieur de notre site, permettant aux utilisateurs de personnaliser leur expérience en changeant les couleurs de fond et de police.&#xA;Ce guide vous guidera à travers les modifications apportées à top-header.html pour ajouter cette fonctionnalité.&#xA;Introduction L&amp;rsquo;en-tête supérieur de notre site Web comprend désormais deux sélecteurs de couleur : un pour la couleur de fond et un autre pour la couleur de la police.</description>
     </item>
     <item>
@@ -128,11 +163,32 @@
       <description>Requirements git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo Install the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
     </item>
     <item>
+      <title>Setup</title>
+      <link>//localhost:1313/pt/docs/setup/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/setup/</guid>
+      <description>Requirements git Go ≥ v1.19 Hugo ≥ v0.100.0 (Extended Version) Install Hugo Install the Hugo CLI, using the specific instructions for your operating system below:&#xA;Linux&#xD;Homebrew (macOS)&#xD;Windows (Chocolatey)&#xD;Windows (Scoop)&#xD;Your Linux distro’s package manager may include Hugo. If this is the case, install it directly using your distro’s package manager – for instance, in Ubuntu, run the following command. This will install the extended edition of Hugo:</description>
+    </item>
+    <item>
       <title>Über</title>
       <link>//localhost:1313/de/docs/about/</link>
       <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
       <guid>//localhost:1313/de/docs/about/</guid>
       <description>Willkommen bei unserem Projekt zur technischen Dokumentation Dieses Projekt ist Teil unseres Kurses für Informatiktechnik. Es bietet Ihnen praktische Hilfe beim Aufbau und der Verwaltung von Websites für technische Dokumentationen. Wir verwenden moderne Webtechnologien und folgen den besten Praktiken der Branche, um Ihnen zu helfen, technische Dokumentation gut zu erlernen.&#xA;Was wir erreichen wollen Wir sind hier, um sowohl neuen als auch erfahrenen Entwicklern zu helfen, den Aufbau von Dokumentationswebsites zu verstehen.</description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>//localhost:1313/fr/docs/example-content/code/</link>
+      <pubDate>Mon, 22 May 2023 00:44:31 +0100</pubDate>
+      <guid>//localhost:1313/fr/docs/example-content/code/</guid>
+      <description>Code Block Examples Code block language examples&#xA;Go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;hello world&amp;#34;) } HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Markdown # H1 heading **Some bold text** *Italic text example* </description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>//localhost:1313/pt/docs/example-content/code/</link>
+      <pubDate>Mon, 22 May 2023 00:44:31 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/example-content/code/</guid>
+      <description>Code Block Examples Code block language examples&#xA;Go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;hello world&amp;#34;) } HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Markdown # H1 heading **Some bold text** *Italic text example* </description>
     </item>
   </channel>
 </rss>

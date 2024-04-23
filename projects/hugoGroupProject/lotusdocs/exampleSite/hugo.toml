@@ -20,6 +20,11 @@ defaultContentLanguage = 'en'
     languageName = "Deutsch"
     contentDir = "content/de"
     weight = 30
+  [languages.pt]
+    title = "Site de Exemplo de Documentação do Lotus"
+    languageName = "Portuguese"
+    contentDir = "content/pt"
+    weight = 40
 
 [module]
   [module.hugoVersion]
