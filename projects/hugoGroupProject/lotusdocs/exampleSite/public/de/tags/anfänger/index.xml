@@ -1,11 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anfänger on Lotus Docs Beispiel Site</title><link>$%7BDEPLOY_PRIME_URL%7D/de/tags/anf%C3%A4nger/</link><description>Recent content in Anfänger on Lotus Docs Beispiel Site</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Mon, 22 Apr 2024 22:17:43 +0100</lastBuildDate><atom:link href="$%7BDEPLOY_PRIME_URL%7D/de/tags/anf%C3%A4nger/index.xml" rel="self" type="application/rss+xml"/><item><title>Farbauswahl</title><link>$%7BDEPLOY_PRIME_URL%7D/de/docs/color-picking/</link><pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate><guid>$%7BDEPLOY_PRIME_URL%7D/de/docs/color-picking/</guid><description>Anpassung des oberen Headers mit Farbauswahl linkWir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, mit der Benutzer ihr Erlebnis personalisieren können, indem sie die Hintergrund- und Schriftfarben ändern.
-Dieser Leitfaden führt Sie durch die Änderungen, die an top-header.html vorgenommen wurden, um diese Funktion hinzuzufügen.
-Einführung linkDer obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.
-Diese Ergänzung verbessert das Benutzerengagement, indem sie eine anpassbarere Benutzeroberfläche bietet.</description></item><item><title>Implementierung der Farbauswahlseite</title><link>$%7BDEPLOY_PRIME_URL%7D/de/docs/color-picking-implementation/</link><pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate><guid>$%7BDEPLOY_PRIME_URL%7D/de/docs/color-picking-implementation/</guid><description>Einführung linkIn dieser Seite ist es möglich, einem schrittweisen Leitfaden zu folgen, der den Leser darüber informiert, wie die Farbauswahlseite auf dieser Website erstellt wird.
-Einrichtung link Hugo und Go installieren
-Wenn Sie Hugo und Go noch nicht installiert haben, können Sie die Installationsanleitungen unter Hugo Installation einsehen. Wenn Sie sie bereits installiert haben, können Sie diesen Schritt überspringen und direkt zum nächsten übergehen.
-Vergessen Sie nicht die Voraussetzungen. Sie sollten den folgenden Befehl oder ähnliches benötigen: choco install hugo-extended (Windows) oder brew install hugo (Mac) zum Beispiel.</description></item><item><title>Implementierung der Über uns-Seite</title><link>$%7BDEPLOY_PRIME_URL%7D/de/docs/about-implement-de/</link><pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate><guid>$%7BDEPLOY_PRIME_URL%7D/de/docs/about-implement-de/</guid><description>Einleitung linkAuf dieser Seite können Sie einer schrittweisen Anleitung folgen, die darauf abzielt, den Leser darüber zu informieren, wie die Farbwähler-Seite auf dieser Website erstellt wird.
-Einrichtung link Installieren Sie Hugo und Go
-Wenn Sie Hugo und Go noch nicht installiert haben, können Sie die Installationsanleitungen unter Hugo Installation einsehen. Wenn Sie sie bereits installiert haben, können Sie diesen Schritt überspringen und direkt zum nächsten übergehen.
-Vergessen Sie nicht die Voraussetzungen.</description></item><item><title>Über</title><link>$%7BDEPLOY_PRIME_URL%7D/de/docs/about/</link><pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate><guid>$%7BDEPLOY_PRIME_URL%7D/de/docs/about/</guid><description>Willkommen bei unserem Projekt zur technischen Dokumentation linkDieses Projekt ist Teil unseres Kurses für Informatiktechnik. Es bietet Ihnen praktische Hilfe beim Aufbau und der Verwaltung von Websites für technische Dokumentationen. Wir verwenden moderne Webtechnologien und folgen den besten Praktiken der Branche, um Ihnen zu helfen, technische Dokumentation gut zu erlernen.
-Was wir erreichen wollen linkWir sind hier, um sowohl neuen als auch erfahrenen Entwicklern zu helfen, den Aufbau von Dokumentationswebsites zu verstehen.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anfänger on Lotus Docs Beispiel Site</title>
+    <link>//localhost:1313/de/tags/anf%C3%A4nger/</link>
+    <description>Recent content in Anfänger on Lotus Docs Beispiel Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 22 Apr 2024 22:17:43 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/de/tags/anf%C3%A4nger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Farbauswahl</title>
+      <link>//localhost:1313/de/docs/color-picking/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/de/docs/color-picking/</guid>
+      <description>Anpassung des oberen Headers mit Farbauswahl linkWir haben eine interaktive Funktion im oberen Header unserer Website eingeführt, mit der Benutzer ihr Erlebnis personalisieren können, indem sie die Hintergrund- und Schriftfarben ändern.&#xA;Dieser Leitfaden führt Sie durch die Änderungen, die an top-header.html vorgenommen wurden, um diese Funktion hinzuzufügen.&#xA;Einführung linkDer obere Header unserer Website enthält jetzt zwei Farbauswähler: einen für die Hintergrundfarbe und einen anderen für die Schriftfarbe.&#xA;Diese Ergänzung verbessert das Benutzerengagement, indem sie eine anpassbarere Benutzeroberfläche bietet.</description>
+    </item>
+    <item>
+      <title>Implementierung der Farbauswahlseite</title>
+      <link>//localhost:1313/de/docs/color-picking-implementation/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/de/docs/color-picking-implementation/</guid>
+      <description>Einführung linkIn dieser Seite ist es möglich, einem schrittweisen Leitfaden zu folgen, der den Leser darüber informiert, wie die Farbauswahlseite auf dieser Website erstellt wird.&#xA;Einrichtung link Hugo und Go installieren&#xA;Wenn Sie Hugo und Go noch nicht installiert haben, können Sie die Installationsanleitungen unter Hugo Installation einsehen. Wenn Sie sie bereits installiert haben, können Sie diesen Schritt überspringen und direkt zum nächsten übergehen.&#xA;Vergessen Sie nicht die Voraussetzungen. Sie sollten den folgenden Befehl oder ähnliches benötigen: choco install hugo-extended (Windows) oder brew install hugo (Mac) zum Beispiel.</description>
+    </item>
+    <item>
+      <title>Implementierung der Über uns-Seite</title>
+      <link>//localhost:1313/de/docs/about-implement-de/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/de/docs/about-implement-de/</guid>
+      <description>Einleitung linkAuf dieser Seite können Sie einer schrittweisen Anleitung folgen, die darauf abzielt, den Leser darüber zu informieren, wie die Farbwähler-Seite auf dieser Website erstellt wird.&#xA;Einrichtung link Installieren Sie Hugo und Go&#xA;Wenn Sie Hugo und Go noch nicht installiert haben, können Sie die Installationsanleitungen unter Hugo Installation einsehen. Wenn Sie sie bereits installiert haben, können Sie diesen Schritt überspringen und direkt zum nächsten übergehen.&#xA;Vergessen Sie nicht die Voraussetzungen.</description>
+    </item>
+    <item>
+      <title>Über</title>
+      <link>//localhost:1313/de/docs/about/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/de/docs/about/</guid>
+      <description>Willkommen bei unserem Projekt zur technischen Dokumentation linkDieses Projekt ist Teil unseres Kurses für Informatiktechnik. Es bietet Ihnen praktische Hilfe beim Aufbau und der Verwaltung von Websites für technische Dokumentationen. Wir verwenden moderne Webtechnologien und folgen den besten Praktiken der Branche, um Ihnen zu helfen, technische Dokumentation gut zu erlernen.&#xA;Was wir erreichen wollen linkWir sind hier, um sowohl neuen als auch erfahrenen Entwicklern zu helfen, den Aufbau von Dokumentationswebsites zu verstehen.</description>
+    </item>
+  </channel>
+</rss>

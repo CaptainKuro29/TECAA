@@ -44,15 +44,15 @@ Netlify will automatically detect your Hugo website. Check the build settings, a
 ### 5. Deploy Your Site
 
 Option 1 : Click "Deploy site." Netlify will start building your Hugo website.
-Option 2 : Access the folder where your hugo website is stored. Install netlify using 
+Option 2 : Access the folder where your hugo website is stored. Install netlify using: 
 ```shell
 npm install -g netlify-cli
 ```
-. After the  is finished, type 
+After the installation is finished, type:  
 ```shell 
 netlify deploy prod
 ```
-and follow the steps. 
+and follow the steps.
 
 ### 6. Access Your Site
 
