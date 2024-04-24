@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exemple de Contenu on Lotus Docs Exemple de Site</title>
+    <link>//localhost:1313/fr/docs/example-content/</link>
+    <description>Recent content in Exemple de Contenu on Lotus Docs Exemple de Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 23 Apr 2024 22:48:43 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/fr/docs/example-content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code</title>
+      <link>//localhost:1313/fr/docs/example-content/code/</link>
+      <pubDate>Mon, 22 May 2023 00:44:31 +0100</pubDate>
+      <guid>//localhost:1313/fr/docs/example-content/code/</guid>
+      <description>Code Block Examples linkCode block language examples&#xA;Go link&#xD;package main&#xD;import &amp;#34;fmt&amp;#34;&#xD;func main() {&#xD;fmt.Println(&amp;#34;hello world&amp;#34;)&#xD;}&#xD;HTML link&#xD;&amp;lt;!DOCTYPE html&amp;gt;&#xD;&amp;lt;html&amp;gt;&#xD;&amp;lt;body&amp;gt;&#xD;&amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt;&#xD;&amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt;&#xD;&amp;lt;/body&amp;gt;&#xD;&amp;lt;/html&amp;gt;&#xD;Markdown link&#xD;# H1 heading&#xD;**Some bold text**&#xD;*Italic text example*&#xD;</description>
+    </item>
+  </channel>
+</rss>

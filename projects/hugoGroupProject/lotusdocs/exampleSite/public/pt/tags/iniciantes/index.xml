@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iniciantes on Site de Exemplo de Documentação do Lotus</title>
+    <link>//localhost:1313/pt/tags/iniciantes/</link>
+    <description>Recent content in Iniciantes on Site de Exemplo de Documentação do Lotus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt</language>
+    <lastBuildDate>Tue, 23 Apr 2024 23:24:28 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/pt/tags/iniciantes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementaçao Seleção de Cores</title>
+      <link>//localhost:1313/pt/docs/color-picking-implementation/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking-implementation/</guid>
+      <description>Introdução linkNesta página, é possível seguir um guia passo a passo que tem como objetivo educar o leitor sobre como criar uma página de seleção de cores neste site.&#xA;Configuração link Instale o Hugo e o Go Se ainda não instalou o Hugo e o Go, pode consultar as diretrizes de instalação fornecidas em Instalação do Hugo. Se já os tiver instalado, pode ignorar este passo e avançar diretamente para o próximo.</description>
+    </item>
+    <item>
+      <title>Seleçao de cores</title>
+      <link>//localhost:1313/pt/docs/color-picking/</link>
+      <pubDate>Wed, 03 May 2023 22:37:22 +0100</pubDate>
+      <guid>//localhost:1313/pt/docs/color-picking/</guid>
+      <description>Personalização do Cabeçalho Superior com Seletor de Cores linkIntroduzimos uma funcionalidade interativa no cabeçalho superior do nosso site, permitindo que os usuários personalizem sua experiência alterando as cores de fundo e da fonte.&#xA;Este guia irá guiá-lo pelas alterações feitas no top-header.html para adicionar essa funcionalidade. No final, você deverá ser capaz de recriar essa funcionalidade.&#xA;Introdução linkO cabeçalho superior do nosso site agora inclui dois seletores de cores: um para a cor de fundo e outro para a cor da fonte.</description>
+    </item>
+  </channel>
+</rss>
